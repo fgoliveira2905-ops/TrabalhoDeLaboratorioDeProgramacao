@@ -101,6 +101,7 @@ int main(void) {
                 printf("E necessario outra matriz para esta opcao (Prima 9 primeiro).\nInserir outro numero: ");
                 break;
             case 11:
+                somaDeVetores(int A[], int N);
                 break;
         }
     } while (option < 1 || option > 11 || option == 10);

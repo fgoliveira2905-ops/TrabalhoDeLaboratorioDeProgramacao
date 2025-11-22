@@ -376,3 +376,43 @@ void mmcDoVetor(int A[],int tamanho) {
     free(B);
     
 }
+
+/**
+ * @brief Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador.
+ *
+ * Esta função lê um novo vetor @p B com @p N elementos fornecidos pelo utilizador,
+ * duplica todos os seus valores e, em seguida, soma cada posição do vetor original @p A
+ * com o vetor @p B já transformado.
+ *
+ * O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.
+ *
+ * @param A Vetor original.
+ * @param N Número de elementos dos vetores.
+ *
+ * @note O vetor inserido pelo utilizador é modificado para conter o dobro dos seus valores
+ * antes da operação de soma.
+ */
+void somaDeVetores(int A[], int N) {
+    int B[N];
+    int i, VetorSoma[N];
+    
+    //Lê o novo vetor
+    for (i = 0; i < N; i++) {
+        printf("Insira o %d elemento do novo vetor: ", i + 1);
+        scanf("%d", &B[i]);
+    }
+    
+    //Transforma os elementos do vetor inserido no dobro deles
+    for (i = 0; i < N; i++) {
+        B[i] = 2 * B[i];
+    }
+    
+    //Soma os dois vetores
+    for(i = 0; i < N; i++) {
+        VetorSoma[i] = A[i] + B[i];
+    }
+        
+    //Imprime o novo vetor resultante da soma
+    printf("Soma do vetor original pelo dobro do segundo vetor inserido:\n");
+    escreverArray(VetorSoma, N);
+}

@@ -10,5 +10,6 @@ var functions_1_8h =
     [ "minimo", "functions-1_8h.html#a9a5fb8a3ac669145dd206527c76747bb", null ],
     [ "mmc", "functions-1_8h.html#aa3d7c552c82bafc4972a6cb1605b028e", null ],
     [ "mmcDoVetor", "functions-1_8h.html#ab3f194b11c0a186933381df283a42c7d", null ],
+    [ "somaDeVetores", "functions-1_8h.html#a233cbe48916fe7cd74f20346b9cd152e", null ],
     [ "vetorDecrescente", "functions-1_8h.html#a46077a303703530a95f73d709620867e", null ]
 ];

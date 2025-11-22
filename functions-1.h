@@ -187,4 +187,22 @@ int mmc(int a, int b);
  */
 int mdc(int a, int b);
 
+
+/**
+ * @brief Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.
+ *
+ * Lê um novo vetor @p B com @p N elementos fornecidos pelo utilizador,
+ * duplica cada um dos seus valores e soma cada posição de @p A com o vetor
+ * já transformado. O resultado é armazenado num vetor auxiliar e impresso.
+ *
+ * @param A Vetor original.
+ * @param N Número de elementos dos vetores.
+ *
+ * Exemplo de uso:
+ * @code
+ * somaDeVetores(vetor, 14);
+ * @endcode
+ */
+void somaDeVetores(int A[], int N);
+
 #endif /* FUNCTIONS_1_H */

@@ -123,6 +123,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa3d7c552c82bafc4972a6cb1605b028e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.  <br /></td></tr>
 <tr class="memitem:a0a30302f4720a1282e1b5fd5dbed015a" id="r_a0a30302f4720a1282e1b5fd5dbed015a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a30302f4720a1282e1b5fd5dbed015a">mdc</a> (int a, int b)</td></tr>
 <tr class="memdesc:a0a30302f4720a1282e1b5fd5dbed015a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o máximo divisor comum (MDC) entre dois inteiros.  <br /></td></tr>
+<tr class="memitem:a233cbe48916fe7cd74f20346b9cd152e" id="r_a233cbe48916fe7cd74f20346b9cd152e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a> (int A[], int N)</td></tr>
+<tr class="memdesc:a233cbe48916fe7cd74f20346b9cd152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declaração das funções auxiliares para manipulação de vetores e matrizes. </p>
@@ -500,6 +502,50 @@ Essa função depende de da função <a class="el" href="#aa3d7c552c82bafc4972a6
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa3d7c552c82bafc4972a6cb1605b028e" title="Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.">mmc()</a> Para calcular o mínimo múltiplo comum entre dois inteiros. </dd>
 <dd>
 <a class="el" href="#a0a30302f4720a1282e1b5fd5dbed015a" title="Calcula o máximo divisor comum (MDC) entre dois inteiros.">mdc()</a> Para calcular o mínimo divisor comum entre dois inteiros. </dd></dl>
+
+</div>
+</div>
+<a id="a233cbe48916fe7cd74f20346b9cd152e" name="a233cbe48916fe7cd74f20346b9cd152e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233cbe48916fe7cd74f20346b9cd152e">&#9670;&#160;</a></span>somaDeVetores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void somaDeVetores </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>A</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>N</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador. </p>
+<p>Lê um novo vetor <code class="param">B</code> com <code class="param">N</code> elementos fornecidos pelo utilizador, duplica cada um dos seus valores e soma cada posição de <code class="param">A</code> com o vetor já transformado. O resultado é armazenado num vetor auxiliar e impresso.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Vetor original. </td></tr>
+    <tr><td class="paramname">N</td><td>Número de elementos dos vetores.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-1_8c.html#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a>(vetor, 14);</div>
+<div class="ttc" id="afunctions-1_8c_html_a233cbe48916fe7cd74f20346b9cd152e"><div class="ttname"><a href="functions-1_8c.html#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a></div><div class="ttdeci">void somaDeVetores(int A[], int N)</div><div class="ttdoc">Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador.</div><div class="ttdef"><b>Definition</b> functions-1.c:395</div></div>
+</div><!-- fragment --><p>Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.</p>
+<p>Esta função lê um novo vetor <code class="param">B</code> com <code class="param">N</code> elementos fornecidos pelo utilizador, duplica todos os seus valores e, em seguida, soma cada posição do vetor original <code class="param">A</code> com o vetor <code class="param">B</code> já transformado.</p>
+<p>O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Vetor original. </td></tr>
+    <tr><td class="paramname">N</td><td>Número de elementos dos vetores.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>O vetor inserido pelo utilizador é modificado para conter o dobro dos seus valores antes da operação de soma. </dd></dl>
 
 </div>
 </div>

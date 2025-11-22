@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxcol_0',['MAXCOL',['../main_8c.html#aef214bee44b8ea3707359a56c8c921c6',1,'main.c']]]
+  ['max_5fsize_0',['MAX_SIZE',['../main_8c.html#a0592dba56693fad79136250c11e5a7fe',1,'main.c']]]
 ];

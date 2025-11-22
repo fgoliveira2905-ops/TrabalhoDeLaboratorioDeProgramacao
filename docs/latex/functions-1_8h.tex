@@ -31,7 +31,9 @@ void \mbox{\hyperlink{functions-1_8h_ab3f194b11c0a186933381df283a42c7d}{mmc\+Do\
 int \mbox{\hyperlink{functions-1_8h_aa3d7c552c82bafc4972a6cb1605b028e}{mmc}} (int a, int b)
 \begin{DoxyCompactList}\small\item\em Calcula o mínimo múltiplo comum (MMC) entre dois inteiros. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{functions-1_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc}} (int a, int b)
-\begin{DoxyCompactList}\small\item\em Calcula o máximo divisor comum (MDC) entre dois inteiros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calcula o máximo divisor comum (MDC) entre dois inteiros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-1_8h_a233cbe48916fe7cd74f20346b9cd152e}{soma\+De\+Vetores}} (int A\mbox{[}$\,$\mbox{]}, int N)
+\begin{DoxyCompactList}\small\item\em Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -374,6 +376,48 @@ Essa função depende de da função \doxylink{functions-1_8h_aa3d7c552c82bafc49
 
 \doxylink{functions-1_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()} Para calcular o mínimo divisor comum entre dois inteiros. 
 \end{DoxySeeAlso}
+\Hypertarget{functions-1_8h_a233cbe48916fe7cd74f20346b9cd152e}\index{functions-\/1.h@{functions-\/1.h}!somaDeVetores@{somaDeVetores}}
+\index{somaDeVetores@{somaDeVetores}!functions-\/1.h@{functions-\/1.h}}
+\doxysubsubsection{\texorpdfstring{somaDeVetores()}{somaDeVetores()}}
+{\footnotesize\ttfamily \label{functions-1_8h_a233cbe48916fe7cd74f20346b9cd152e} 
+void soma\+De\+Vetores (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{N}{}\end{DoxyParamCaption})}
+
+
+
+Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador. 
+
+Lê um novo vetor {\ttfamily B} com {\ttfamily N} elementos fornecidos pelo utilizador, duplica cada um dos seus valores e soma cada posição de {\ttfamily A} com o vetor já transformado. O resultado é armazenado num vetor auxiliar e impresso.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Vetor original. \\
+\hline
+{\em N} & Número de elementos dos vetores.\\
+\hline
+\end{DoxyParams}
+Exemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{functions-1_8c_a233cbe48916fe7cd74f20346b9cd152e}{somaDeVetores}}(vetor,\ 14);}
+
+\end{DoxyCode}
+
+
+Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.
+
+Esta função lê um novo vetor {\ttfamily B} com {\ttfamily N} elementos fornecidos pelo utilizador, duplica todos os seus valores e, em seguida, soma cada posição do vetor original {\ttfamily A} com o vetor {\ttfamily B} já transformado.
+
+O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Vetor original. \\
+\hline
+{\em N} & Número de elementos dos vetores.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+O vetor inserido pelo utilizador é modificado para conter o dobro dos seus valores antes da operação de soma. 
+\end{DoxyNote}
 \Hypertarget{functions-1_8h_a46077a303703530a95f73d709620867e}\index{functions-\/1.h@{functions-\/1.h}!vetorDecrescente@{vetorDecrescente}}
 \index{vetorDecrescente@{vetorDecrescente}!functions-\/1.h@{functions-\/1.h}}
 \doxysubsubsection{\texorpdfstring{vetorDecrescente()}{vetorDecrescente()}}
