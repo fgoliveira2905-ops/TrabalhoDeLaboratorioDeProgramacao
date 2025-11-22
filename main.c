@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "functions-1.h"
-#define MAXCOL 14
+#define MAX_SIZE 14
 
 /**
  * @file main.c
@@ -30,7 +30,7 @@
  */
 
 int main(void) {
-    int N = MAXCOL;
+    int N = MAXSIZE;
     int A[N];
     int option;
     int media;
