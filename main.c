@@ -138,6 +138,7 @@ int main(void) {
  * - `matrizDoisPorCatorze()` — cria uma matriz 2x14 com o vetor original e o vetor ordenado.
  * - `calculoDaRaizQuadrada()` — calcula a raiz quadrada de todos os elementos.
  * - `minimo()` — identifica o valor mínimo do vetor.
+ * - `somaDeVetores()` - soma o vetor original pelo dobro de um novo vetor inserido pelo usuário.
  *
  * Estas funções encontram‑se definidas no ficheiro `functions-1.h` e implementadas
  * no ficheiro correspondente `.c`. Cada função possui documentação Doxygen
@@ -159,5 +160,6 @@ int main(void) {
  * - **Ordenação:** organização do vetor de forma crescente ou decrescente.
  * - **MMC de pares de números:** cálculo do mínimo múltiplo comum entre elementos consecutivos.
  * - **Produto de vetores para formar matriz:** criação de uma matriz 14x14 a partir do vetor inicial.
+ * - **Soma de um vetor pelo dobro de um segundo vetor inserido pelo usuário**
  *
  */
