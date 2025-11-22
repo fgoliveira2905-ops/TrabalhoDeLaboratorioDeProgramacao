@@ -30,7 +30,7 @@
  */
 
 int main(void) {
-    int N = MAXSIZE;
+    int N = MAX_SIZE;
     int A[N];
     int option;
     int media;
