@@ -1,6 +1,6 @@
 var files_dup =
 [
-    [ "functions-1.c", "functions-1_8c.html", "functions-1_8c" ],
-    [ "functions-1.h", "functions-1_8h.html", "functions-1_8h" ],
-    [ "main.c", "main_8c.html", "main_8c" ]
+    [ "functions-team-2.c", "functions-team-2_8c.html", "functions-team-2_8c" ],
+    [ "functions-team-2.h", "functions-team-2_8h.html", "functions-team-2_8h" ],
+    [ "main-team-2.c", "main-team-2_8c.html", "main-team-2_8c" ]
 ];

@@ -18,6 +18,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <ctype.h>
 
 /**
  * @brief Lê elementos inteiros de um vetor do usuário.
@@ -223,6 +224,26 @@ void somaDeVetores(int A[], int N);
  * int det = determinante(M, 3);
  * @endcode
  */
-int determinante(int matriz[][100], int n);
+
+/**
+ *@brief
+ *
+ *Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.
+ *
+ *@param A vetores inseridos pelo usuário.
+ *@param N Dimensão da matriz.
+ *
+ *Exemplo de uso:
+ *@code
+ *int A[5] = { 1, 2, 3, 4, 5 }
+ *matriz(A, 5);
+ *@endcode
+ */
+void matriz(int A[], int N);
+
+
+long long determinante(long long matriz[100][100], int N);
+
+
 
 #endif /* FUNCTIONS_1_H */

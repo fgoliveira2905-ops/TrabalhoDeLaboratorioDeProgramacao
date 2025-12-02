@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "functions-team-2.h"
+#include <ctype.h>
 #define MAX_SIZE 14
 
 /**
@@ -35,6 +36,7 @@ int main(void) {
     int option;
     int media;
     int min;
+    int choice;
 
     /* Tela que pede que o ultilizador pressione ENTER para continuar */
     do {
@@ -96,7 +98,7 @@ int main(void) {
                 mmcDoVetor(A, N);
                 break;
             case 9:
-                
+                matriz(A, N);
                 break;
             case 10:
                 printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\nInserir outro numero: ");

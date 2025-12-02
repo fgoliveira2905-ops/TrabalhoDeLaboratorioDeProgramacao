@@ -418,86 +418,81 @@ void somaDeVetores(int A[], int N) {
     escreverArray(VetorSoma, N);
 }
 
-/**
- @brief Cálculo de uma matriz NxN
- *
- * Esta função utiliza expansão por Laplace de forma recursiva para calcular
- * o determinante de uma matriz quadrada de dimensão N. A cada passo, é criada
- * uma submatriz (menor complementar) removendo a primeira linha e a coluna atual.
- *
- * @param matriz Matriz quadrada NxN cujos valores serão usados no cálculo.
- * @param n Dimensão atual da matriz (N > 1).
- * @return Valor inteiro correspondente ao determinante da matriz.
- *
- */
-int determinante(int matriz[][100], int n) {
+// Determinante recursivo seguro usando long long
+long long determinant(long long matrix[100][100], int n) {
+    if (n == 1) return matrix[0][0]; // caso base 1x1
+    if (n == 2) return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]; // caso 2x2
 
-    int submatriz[n][n];
-    int det = 0, x;
+    long long det = 0;
+    long long submatrix[100][100];
+    int sign = 1;
 
-    for (x = 0; x < n; x++) {
-
+    for (int k = 0; k < n; k++) {
         int subi = 0;
         for (int i = 1; i < n; i++) {
             int subj = 0;
             for (int j = 0; j < n; j++) {
-                if (j == x) continue;
-
-                submatriz[subi][subj] = matriz[i][j];
+                if (j == k) continue;
+                submatrix[subi][subj] = matrix[i][j];
                 subj++;
             }
             subi++;
         }
-
-        int sinal = (x % 2 == 0) ? 1 : -1;
-        det = det + sinal * matriz[0][x] * determinante(submatriz, n - 1);
+        det += sign * matrix[0][k] * determinant(submatrix, n - 1);
+        sign = -sign;
     }
-
     return det;
 }
-    
-/**
- *@brief Devolução de uma matriz 14x14
- *
- *
- *
- */
+
 void matriz(int A[], int N) {
-    
-    int b[N], i, k;
-    int matriz[N][N];
-    int soma = 0;
-    char option;
-    int det;
-    
-    printf("Insira um novo vetor de 14 elementos. \n");
-    ecreverArray(b, N);
-    
-    //Matriz resultante da multiplicação das anteriores
-    for(i = 0; i < N; i++) {
-        for (k = 0; k < N; i++) {
-            matriz[i][k] = A[i] * B[k];
+    long long b[100];
+    long long matriz[100][100];
+    int i, k;
+    int choice;
+
+    // Ler o novo vetor de N elementos fornecido pelo utilizador
+    printf("Insira um novo vetor de %d elementos:\n", N);
+    for (i = 0; i < N; i++) {
+        scanf("%lld", &b[i]);
+    }
+
+    // Matriz resultante do produto externo dos vetores
+    for (i = 0; i < N; i++) {
+        for (k = 0; k < N; k++) {
+            matriz[i][k] = (long long)A[i] * b[k];
         }
     }
 
-    //Escrita da matriz
+    // Escrever matriz
+    printf("\nMatriz gerada:\n");
     for (i = 0; i < N; i++) {
         for (k = 0; k < N; k++) {
-            printf("%d ", matriz[i][j]);
+            printf("%lld ", matriz[i][k]);
         }
+        printf("\n");
     }
-    
-    printf("Deseja calular o determinante da matriz (Y - Sim / N - Nao)?\n");
-    scanf("%c ", &option);
-    
-    switch (option) {
-        case 'y' || 'Y':
-            det = determinante(matriz, N);
-            printf("Determinante da matriz: %d", det);
-            break;
-        case 'n' || 'N':
-        
-            break;
+    printf("\n");
+
+    // Pergunta ao usuário se deseja calcular o determinante
+    do {
+        printf("Pretende calcular o determinante dessa matriz?\n");
+        printf("(1 - Sim / 2 - Nao): ");
+
+        int result = scanf("%d", &choice);
+
+        // Limpar buffer para evitar problemas com enter sobrando
+        while(getchar() != '\n');
+
+        if (result != 1 || (choice != 1 && choice != 2)) {
+            printf("Entrada inválida! Tente novamente.\n");
+        }
+
+    } while (choice != 1 && choice != 2);
+
+    if (choice == 1) {
+        long long det = determinant(matriz, N);
+        printf("Determinante = %lld\n", det);
+    } else {
+        printf("Determinante não calculado.\n");
     }
-    
 }

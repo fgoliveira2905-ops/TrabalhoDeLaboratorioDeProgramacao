@@ -1,0 +1,393 @@
+\doxysection{functions-\/team-\/2.c File Reference}
+\hypertarget{functions-team-2_8c}{}\label{functions-team-2_8c}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{functions-team-2_8c_a211274a7a16d67fc1337305d5daa4c61}{ler\+Array}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Lê os valores de um vetor dentro de um intervalo específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_a8ab499959843a1b199f02db4537eb5aa}{escrever\+Array}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Escreve no ecrã os elementos de um vetor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9}{media\+Array}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Calcula a média dos elementos de um vetor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_aaf4950dc84a65aaae3c7c46a55eb24e6}{maiores\+Valores\+Divisiveis\+Por5}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Cria e escreve um vetor com valores maiores que 2 e divisíveis por 5. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_a886912dd80dd71c90cfb118a7304d34b}{vetor\+Decrescente}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Cria e escreve um vetor ordenado por ordem decrescente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_ad9b24c08424a9ad689669a157de42df1}{matriz\+Dois\+Por\+Catorze}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Cria uma matriz 2×N composta pelo vetor original e pelo vetor original ordenado por ordem crescente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_a6874eaf2bf059a4abc01b3ecfb030897}{calculo\+Da\+Raiz\+Quadrada}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Calcula a raiz quadrada de todos os elementos do vetor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_ac7c9e1438208537d4308112b49ea014c}{ajuda}} (void)
+\begin{DoxyCompactList}\small\item\em Página de ajuda. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions-team-2_8c_a2befbe8b2f5e26a7c293869fec2b1e87}{minimo}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Devolve o valor mínimo do vetor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions-team-2_8c_a0a30302f4720a1282e1b5fd5dbed015a}{mdc}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Devolve o valor do mínimo divisor comum de dois numeros inteiros. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions-team-2_8c_aa3d7c552c82bafc4972a6cb1605b028e}{mmc}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Devolve o valor do máximo múltiplo comum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_ab3f194b11c0a186933381df283a42c7d}{mmc\+Do\+Vetor}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
+\begin{DoxyCompactList}\small\item\em Calcula o mínimo múltiplo comum (MMC) de elementos consecutivos de um vetor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_a233cbe48916fe7cd74f20346b9cd152e}{soma\+De\+Vetores}} (int A\mbox{[}$\,$\mbox{]}, int N)
+\begin{DoxyCompactList}\small\item\em Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante}} (int \mbox{\hyperlink{functions-team-2_8c_a535831ae75a4654fea9f3707b07e076c}{matriz}}\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Cálculo de uma matriz NxN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8c_a535831ae75a4654fea9f3707b07e076c}{matriz}} (int A\mbox{[}$\,$\mbox{]}, int N)
+\begin{DoxyCompactList}\small\item\em Gera uma matriz NxN a partir do produto entre um vetor original e um novo vetor inserido pelo utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{functions-team-2_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{functions-team-2_8c_ac7c9e1438208537d4308112b49ea014c}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!ajuda@{ajuda}}
+\index{ajuda@{ajuda}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{ajuda()}{ajuda()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ac7c9e1438208537d4308112b49ea014c} 
+void ajuda (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Página de ajuda. 
+
+Imprime instruções de ajuda para o usuário.
+
+Esta função dá uma breve explicação do que cada opção que o usuário pode ultilizar fazer \Hypertarget{functions-team-2_8c_a6874eaf2bf059a4abc01b3ecfb030897}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!calculoDaRaizQuadrada@{calculoDaRaizQuadrada}}
+\index{calculoDaRaizQuadrada@{calculoDaRaizQuadrada}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{calculoDaRaizQuadrada()}{calculoDaRaizQuadrada()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a6874eaf2bf059a4abc01b3ecfb030897} 
+void calculo\+Da\+Raiz\+Quadrada (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Calcula a raiz quadrada de todos os elementos do vetor. 
+
+Esta função recebe um vetor "{}nome\mbox{[}$\,$\mbox{]}"{} e calcula a raiz quadrada de todos os elementos do vetor e transfere-\/os para um novo vetor "{}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matriz\+Da\+Raiz\mbox{[}$\,$\mbox{]}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}"{}
+
+No final, imprime o novo vetor "{}matriz\+Da\+Raiz\mbox{[}$\,$\mbox{]}"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ Vetor original. \\
+\hline
+{\em tamanho} & -\/ Número de elementos no vetor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!determinante@{determinante}}
+\index{determinante@{determinante}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{determinante()}{determinante()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc} 
+int determinante (\begin{DoxyParamCaption}\item[{int}]{matriz}{\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Cálculo de uma matriz NxN. 
+
+Calcula o determinante de uma matriz quadrada NxN.
+
+Esta função utiliza expansão por Laplace de forma recursiva para calcular o determinante de uma matriz quadrada de dimensão N. A cada passo, é criada uma submatriz (menor complementar) removendo a primeira linha e a coluna atual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & Matriz quadrada NxN cujos valores serão usados no cálculo. \\
+\hline
+{\em n} & Dimensão atual da matriz (N \texorpdfstring{$>$}{>} 1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor inteiro correspondente ao determinante da matriz. 
+\end{DoxyReturn}
+\Hypertarget{functions-team-2_8c_a8ab499959843a1b199f02db4537eb5aa}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!escreverArray@{escreverArray}}
+\index{escreverArray@{escreverArray}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{escreverArray()}{escreverArray()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a8ab499959843a1b199f02db4537eb5aa} 
+void escrever\+Array (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Escreve no ecrã os elementos de um vetor. 
+
+Imprime todos os valores do vetor separados por espaços.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ Vetor a ser escrito. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions-team-2_8c_a211274a7a16d67fc1337305d5daa4c61}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!lerArray@{lerArray}}
+\index{lerArray@{lerArray}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{lerArray()}{lerArray()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a211274a7a16d67fc1337305d5daa4c61} 
+void ler\+Array (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Lê os valores de um vetor dentro de um intervalo específico. 
+
+Esta função solicita ao utilizador valores entre -\/5 e 32 e armazena-\/os no vetor fornecido.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ Vetor onde os valores serão armazenados. \\
+\hline
+{\em tamanho} & -\/ Número de elementos a serem lidos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions-team-2_8c_aaf4950dc84a65aaae3c7c46a55eb24e6}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!maioresValoresDivisiveisPor5@{maioresValoresDivisiveisPor5}}
+\index{maioresValoresDivisiveisPor5@{maioresValoresDivisiveisPor5}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{maioresValoresDivisiveisPor5()}{maioresValoresDivisiveisPor5()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_aaf4950dc84a65aaae3c7c46a55eb24e6} 
+void maiores\+Valores\+Divisiveis\+Por5 (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Cria e escreve um vetor com valores maiores que 2 e divisíveis por 5. 
+
+Filtra o vetor original e armazena apenas os elementos que são maiores que 2 e múltiplos de 5, escrevendo o resultado no ecrã.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & -\/ Vetor original a ser filtrado. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor original. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions-team-2_8c_a535831ae75a4654fea9f3707b07e076c}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!matriz@{matriz}}
+\index{matriz@{matriz}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{matriz()}{matriz()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a535831ae75a4654fea9f3707b07e076c} 
+void matriz (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{N}{}\end{DoxyParamCaption})}
+
+
+
+Gera uma matriz NxN a partir do produto entre um vetor original e um novo vetor inserido pelo utilizador. 
+
+Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.
+
+Esta função lê um novo vetor {\ttfamily B} com {\ttfamily N} elementos, multiplica cada elemento do vetor original {\ttfamily A} pelo elemento correspondente de {\ttfamily B}, e armazena o resultado numa matriz quadrada {\ttfamily matriz} de dimensão NxN.
+
+Cada posição (i, j) da matriz é calculada como\+: matriz\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} = A\mbox{[}i\mbox{]} \texorpdfstring{$\ast$}{*} B\mbox{[}j\mbox{]}
+
+Após gerar a matriz, esta é impressa no ecrã. Em seguida, o utilizador pode escolher se deseja calcular o determinante da matriz. Caso a resposta seja \textquotesingle{}Y\textquotesingle{} ou \textquotesingle{}y\textquotesingle{}, a função \doxylink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante} é chamada para calcular o valor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Vetor original utilizado no cálculo. \\
+\hline
+{\em N} & Número de elementos do vetor e dimensão da matriz quadrada.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Esta função depende da função \doxylink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante} para o cálculo do determinante, caso o utilizador o solicite. 
+\end{DoxyNote}
+\Hypertarget{functions-team-2_8c_ad9b24c08424a9ad689669a157de42df1}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!matrizDoisPorCatorze@{matrizDoisPorCatorze}}
+\index{matrizDoisPorCatorze@{matrizDoisPorCatorze}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{matrizDoisPorCatorze()}{matrizDoisPorCatorze()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ad9b24c08424a9ad689669a157de42df1} 
+void matriz\+Dois\+Por\+Catorze (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Cria uma matriz 2×N composta pelo vetor original e pelo vetor original ordenado por ordem crescente. 
+
+Esta função recebe um vetor A, calcula o vetor B correspondente a A ordenado por ordem crescente e cria uma matriz C com duas linhas\+:
+\begin{DoxyItemize}
+\item Linha 0\+: elementos do vetor A.
+\item Linha 1\+: elementos do vetor B.
+\end{DoxyItemize}
+
+No final, imprime a matriz resultante.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & -\/ Vetor original. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{functions-team-2_8c_a0a30302f4720a1282e1b5fd5dbed015a}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mdc@{mdc}}
+\index{mdc@{mdc}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{mdc()}{mdc()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a0a30302f4720a1282e1b5fd5dbed015a} 
+int mdc (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Devolve o valor do mínimo divisor comum de dois numeros inteiros. 
+
+Calcula o máximo divisor comum (MDC) entre dois inteiros.
+
+Esta função recebe um valor de {\ttfamily a} e {\ttfamily b} e então devolve o mínimo divisor comum entre esses números ultilzando o Algoritmo de Euclides.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Primeiro valor recebido. \\
+\hline
+{\em b} & -\/ Segundo valor recebido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve só o valor de {\ttfamily a} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No final do loop, se {\ttfamily b} = 0, então MDC(a, b) = a. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{functions-team-2_8h_aa3d7c552c82bafc4972a6cb1605b028e}{mmc()} Para calcular o mínimo múltiplo comum usando o MDC. 
+
+mdc\+Do\+Vetor() Essa função é apenas usada na função mdc\+Do\+Vetor. 
+\end{DoxySeeAlso}
+\Hypertarget{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mediaArray@{mediaArray}}
+\index{mediaArray@{mediaArray}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{mediaArray()}{mediaArray()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9} 
+float media\+Array (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Calcula a média dos elementos de um vetor. 
+
+Soma todos os elementos e divide pelo número total de posições.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ Vetor cujos valores serão utilizados. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Média dos valores presentes no vetor. 
+\end{DoxyReturn}
+\Hypertarget{functions-team-2_8c_a2befbe8b2f5e26a7c293869fec2b1e87}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!minimo@{minimo}}
+\index{minimo@{minimo}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{minimo()}{minimo()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a2befbe8b2f5e26a7c293869fec2b1e87} 
+int minimo (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Devolve o valor mínimo do vetor. 
+
+Esta função recebe um vetor "{}nome\mbox{[}$\,$\mbox{]}"{} e compara todos os seus elementos.
+
+No final, devolve o valor mínimo entre os elementos do vetor
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & -\/ Vetor original. \\
+\hline
+{\em tamanho} & -\/ Número de elementos no vetor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ O menor valor encontrado no vetor. 
+\end{DoxyReturn}
+\Hypertarget{functions-team-2_8c_aa3d7c552c82bafc4972a6cb1605b028e}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mmc@{mmc}}
+\index{mmc@{mmc}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{mmc()}{mmc()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_aa3d7c552c82bafc4972a6cb1605b028e} 
+int mmc (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Devolve o valor do máximo múltiplo comum. 
+
+Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.
+
+Está função depende da função \doxylink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()} para funcionar. Ultiliza da fórmula mmc(a, b) = (a x b) / mdc(a, b) para calcular o máximo múltiplo comum.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Primeiro valor recebido. \\
+\hline
+{\em b} & -\/ Segundo valor recebido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve o valor do máximo múltiplo comum entre {\ttfamily a} e {\ttfamily b}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()} Essa função depende da função \doxylink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()} para funcionar. 
+
+mdc\+Do\+Vetor() Essa função é apenas usada na função mdc\+Do\+Vetor. 
+\end{DoxySeeAlso}
+\Hypertarget{functions-team-2_8c_ab3f194b11c0a186933381df283a42c7d}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mmcDoVetor@{mmcDoVetor}}
+\index{mmcDoVetor@{mmcDoVetor}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{mmcDoVetor()}{mmcDoVetor()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ab3f194b11c0a186933381df283a42c7d} 
+void mmc\+Do\+Vetor (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Calcula o mínimo múltiplo comum (MMC) de elementos consecutivos de um vetor. 
+
+Calcula e imprime o mínimo múltiplo comum (MMC) de elementos consecutivos de um vetor.
+
+Esta função recebe um vetor {\ttfamily A} de inteiros e calcula o MMC de cada par de elementos consecutivos, armazenando os resultados num vetor auxiliar {\ttfamily B}. Por fim, imprime todos os valores calculados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & -\/ Vetor de inteiros fornecido pelo usuário. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor {\ttfamily A}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+O vetor resultante {\ttfamily B} terá tamanho igual a {\ttfamily tamanho} -\/ 1, pois cada elemento representa o MMC de um par de elementos consecutivos do vetor original.
+
+Essa função depende de da função \doxylink{functions-team-2_8h_aa3d7c552c82bafc4972a6cb1605b028e}{mmc()} e \doxylink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{functions-team-2_8h_aa3d7c552c82bafc4972a6cb1605b028e}{mmc()} Para calcular o mínimo múltiplo comum entre dois inteiros. 
+
+\doxylink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc()} Para calcular o mínimo divisor comum entre dois inteiros. 
+\end{DoxySeeAlso}
+\Hypertarget{functions-team-2_8c_a233cbe48916fe7cd74f20346b9cd152e}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!somaDeVetores@{somaDeVetores}}
+\index{somaDeVetores@{somaDeVetores}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{somaDeVetores()}{somaDeVetores()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a233cbe48916fe7cd74f20346b9cd152e} 
+void soma\+De\+Vetores (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{N}{}\end{DoxyParamCaption})}
+
+
+
+Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador. 
+
+Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.
+
+Esta função lê um novo vetor {\ttfamily B} com {\ttfamily N} elementos fornecidos pelo utilizador, duplica todos os seus valores e, em seguida, soma cada posição do vetor original {\ttfamily A} com o vetor {\ttfamily B} já transformado.
+
+O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Vetor original. \\
+\hline
+{\em N} & Número de elementos dos vetores.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+O vetor inserido pelo utilizador é modificado para conter o dobro dos seus valores antes da operação de soma. 
+\end{DoxyNote}
+\Hypertarget{functions-team-2_8c_a886912dd80dd71c90cfb118a7304d34b}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!vetorDecrescente@{vetorDecrescente}}
+\index{vetorDecrescente@{vetorDecrescente}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{vetorDecrescente()}{vetorDecrescente()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a886912dd80dd71c90cfb118a7304d34b} 
+void vetor\+Decrescente (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
+
+
+Cria e escreve um vetor ordenado por ordem decrescente. 
+
+Esta função recebe um vetor e cria um novo vetor B onde os elementos aparecem por ordem decrescente a do vetor original. No fim, escreve o vetor resultante no ecrã.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ Vetor original. \\
+\hline
+{\em tamanho} & -\/ Número de elementos do vetor. \\
+\hline
+\end{DoxyParams}
