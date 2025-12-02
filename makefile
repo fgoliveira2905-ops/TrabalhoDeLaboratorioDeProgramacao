@@ -1,11 +1,11 @@
-main.exe : main.o functions-1.o
-	cc -o main.exe main.o functions-1.o
+main.exe : main-team-2.o functions-team-2.o
+	cc -o main.exe main-team-2.o functions-team-2.o
 
-functions-1.o : functions-1.c
-	cc -c functions-1.c
+functions-team-2.o : functions-team-2.c
+	cc -c functions-team-2.c
 
-main.o : main.c functions-1.c
-	cc -c main.c
+main.o : main-team-2.c functions-team-2.c
+	cc -c main-team-2.c
 
 clean :
 	rm *.o
