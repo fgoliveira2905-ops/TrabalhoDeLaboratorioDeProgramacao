@@ -13,8 +13,8 @@
  * @date 2025
  */
 
-#ifndef FUNCTIONS_1_H
-#define FUNCTIONS_1_H
+#ifndef FUNCTIONS_TEAM_2_H
+#define FUNCTIONS_TEAM_2_H
 
 #include <stdio.h>
 #include <math.h>
@@ -223,6 +223,6 @@ void somaDeVetores(int A[], int N);
  * int det = determinante(M, 3);
  * @endcode
  */
-int determinante(int matriz[][], int n);
+int determinante(int matriz[][100], int n);
 
 #endif /* FUNCTIONS_1_H */

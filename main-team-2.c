@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "functions-1.h"
+#include "functions-team-2.h"
 #define MAX_SIZE 14
 
 /**
@@ -50,7 +50,7 @@ int main(void) {
     printf("1 - Cálculo da média de todos os elementos no vetor\n");
     printf("2 - Devolução dos valores maiores que dois e divisíveis por cinco\n");
     printf("3 - Devolução do vetor ordenado por ordem decrescente\n");
-    printf("4 - Construção de uma matriz 2 por 14, em que cada linha é composta pelo vetor lido e pelo vetor ordenado por ordem crescente\n");
+    printf("4 - Construção de uma matriz dois por 14, em que cada linha é composta pelo vetor lido e pelo vetor ordenado por ordem crescente\n");
     printf("5 - Cálculo da raíz quadrada de todos os elementos no vetor\n");
     printf("6 - Identificação do mínimo de todos os elementos do vetor\n");
     printf("7 - Ajuda\n");
@@ -96,15 +96,18 @@ int main(void) {
                 mmcDoVetor(A, N);
                 break;
             case 9:
+                
                 break;
             case 10:
-                printf("E necessario outra matriz para esta opcao (Prima 9 primeiro).\nInserir outro numero: ");
+                printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\nInserir outro numero: ");
                 break;
             case 11:
                 somaDeVetores(A, N);
                 break;
         }
     } while (option < 1 || option > 11 || option == 10);
+    
+    return 0;
 }
 
 /**

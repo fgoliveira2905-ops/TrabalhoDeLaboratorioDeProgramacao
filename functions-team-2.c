@@ -430,7 +430,7 @@ void somaDeVetores(int A[], int N) {
  * @return Valor inteiro correspondente ao determinante da matriz.
  *
  */
-int determinante(int matriz[][], int n) {
+int determinante(int matriz[][100], int n) {
 
     int submatriz[n][n];
     int det = 0, x;
@@ -456,3 +456,48 @@ int determinante(int matriz[][], int n) {
     return det;
 }
     
+/**
+ *@brief Devolução de uma matriz 14x14
+ *
+ *
+ *
+ */
+void matriz(int A[], int N) {
+    
+    int b[N], i, k;
+    int matriz[N][N];
+    int soma = 0;
+    char option;
+    int det;
+    
+    printf("Insira um novo vetor de 14 elementos. \n");
+    ecreverArray(b, N);
+    
+    //Matriz resultante da multiplicação das anteriores
+    for(i = 0; i < N; i++) {
+        for (k = 0; k < N; i++) {
+            matriz[i][k] = A[i] * B[k];
+        }
+    }
+
+    //Escrita da matriz
+    for (i = 0; i < N; i++) {
+        for (k = 0; k < N; k++) {
+            printf("%d ", matriz[i][j]);
+        }
+    }
+    
+    printf("Deseja calular o determinante da matriz (Y - Sim / N - Nao)?\n");
+    scanf("%c ", &option);
+    
+    switch (option) {
+        case 'y' || 'Y':
+            det = determinante(matriz, N);
+            printf("Determinante da matriz: %d", det);
+            break;
+        case 'n' || 'N':
+        
+            break;
+    }
+    
+}
