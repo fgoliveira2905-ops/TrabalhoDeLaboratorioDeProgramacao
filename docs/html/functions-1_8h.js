@@ -2,6 +2,7 @@ var functions_1_8h =
 [
     [ "ajuda", "functions-1_8h.html#ac7c9e1438208537d4308112b49ea014c", null ],
     [ "calculoDaRaizQuadrada", "functions-1_8h.html#a306e81b7dc4188518aed66d290bf2c46", null ],
+    [ "determinante", "functions-1_8h.html#a1480227d96c89e746cd3ab04a41851b1", null ],
     [ "lerArray", "functions-1_8h.html#afe49cd36796a261d1d0a6a2f0fdfdb41", null ],
     [ "maioresValoresDivisiveisPor5", "functions-1_8h.html#abaaf22c118c6f0e05138c7880cc40374", null ],
     [ "matrizDoisPorCatorze", "functions-1_8h.html#adfc58ace2b253bf3260180efd4201401", null ],

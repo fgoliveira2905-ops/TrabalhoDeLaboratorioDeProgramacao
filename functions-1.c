@@ -26,6 +26,7 @@
  * - vetorDecrescente()
  * - matrizDoisPorCatorze()
  * - calculoDaRaizQuadrada()
+ * - determinante()
  */
 
 /**
@@ -413,6 +414,45 @@ void somaDeVetores(int A[], int N) {
     }
         
     //Imprime o novo vetor resultante da soma
-    printf("Soma do vetor original pelo dobro do segundo vetor inserido:\n");
+    printf("Soma do vetor original pelo dobro do segundo vetor inserido: \n");
     escreverArray(VetorSoma, N);
 }
+
+/**
+ @brief Cálculo de uma matriz NxN
+ *
+ * Esta função utiliza expansão por Laplace de forma recursiva para calcular
+ * o determinante de uma matriz quadrada de dimensão N. A cada passo, é criada
+ * uma submatriz (menor complementar) removendo a primeira linha e a coluna atual.
+ *
+ * @param matriz Matriz quadrada NxN cujos valores serão usados no cálculo.
+ * @param n Dimensão atual da matriz (N > 1).
+ * @return Valor inteiro correspondente ao determinante da matriz.
+ *
+ */
+int determinante(int matriz[][], int n) {
+
+    int submatriz[n][n];
+    int det = 0, x;
+
+    for (x = 0; x < n; x++) {
+
+        int subi = 0;
+        for (int i = 1; i < n; i++) {
+            int subj = 0;
+            for (int j = 0; j < n; j++) {
+                if (j == x) continue;
+
+                submatriz[subi][subj] = matriz[i][j];
+                subj++;
+            }
+            subi++;
+        }
+
+        int sinal = (x % 2 == 0) ? 1 : -1;
+        det = det + sinal * matriz[0][x] * determinante(submatriz, n - 1);
+    }
+
+    return det;
+}
+    

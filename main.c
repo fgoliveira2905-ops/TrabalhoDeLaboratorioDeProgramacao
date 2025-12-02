@@ -139,6 +139,7 @@ int main(void) {
  * - `calculoDaRaizQuadrada()` — calcula a raiz quadrada de todos os elementos.
  * - `minimo()` — identifica o valor mínimo do vetor.
  * - `somaDeVetores()` - soma o vetor original pelo dobro de um novo vetor inserido pelo usuário.
+ * - `determinante( )` - calcula o determinante de uma matriz NxN inserida pelo usuário
  *
  * Estas funções encontram‑se definidas no ficheiro `functions-1.h` e implementadas
  * no ficheiro correspondente `.c`. Cada função possui documentação Doxygen

@@ -125,6 +125,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0a30302f4720a1282e1b5fd5dbed015a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o máximo divisor comum (MDC) entre dois inteiros.  <br /></td></tr>
 <tr class="memitem:a233cbe48916fe7cd74f20346b9cd152e" id="r_a233cbe48916fe7cd74f20346b9cd152e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a> (int A[], int N)</td></tr>
 <tr class="memdesc:a233cbe48916fe7cd74f20346b9cd152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.  <br /></td></tr>
+<tr class="memitem:a1480227d96c89e746cd3ab04a41851b1" id="r_a1480227d96c89e746cd3ab04a41851b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1480227d96c89e746cd3ab04a41851b1">determinante</a> (int matriz[][], int n)</td></tr>
+<tr class="memdesc:a1480227d96c89e746cd3ab04a41851b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o determinante de uma matriz quadrada NxN.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declaração das funções auxiliares para manipulação de vetores e matrizes. </p>
@@ -192,6 +194,51 @@ Tiago Isac Cardoso </dd></dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-1_8c.html#a6874eaf2bf059a4abc01b3ecfb030897">calculoDaRaizQuadrada</a>(vetor, 14);</div>
 <div class="ttc" id="afunctions-1_8c_html_a6874eaf2bf059a4abc01b3ecfb030897"><div class="ttname"><a href="functions-1_8c.html#a6874eaf2bf059a4abc01b3ecfb030897">calculoDaRaizQuadrada</a></div><div class="ttdeci">void calculoDaRaizQuadrada(int nome[], int tamanho)</div><div class="ttdoc">Calcula a raiz quadrada de todos os elementos do vetor.</div><div class="ttdef"><b>Definition</b> functions-1.c:246</div></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a1480227d96c89e746cd3ab04a41851b1" name="a1480227d96c89e746cd3ab04a41851b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1480227d96c89e746cd3ab04a41851b1">&#9670;&#160;</a></span>determinante()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int determinante </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>matriz</em></span>[][], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula o determinante de uma matriz quadrada NxN. </p>
+<p>Esta função aplica a expansão por Laplace de forma recursiva para determinar o valor do determinante. A cada chamada, é construída uma submatriz menor removendo a primeira linha e uma coluna específica.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matriz</td><td>Matriz quadrada NxN usada no cálculo. </td></tr>
+    <tr><td class="paramname">n</td><td>Dimensão atual da matriz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Determinante da matriz.</dd></dl>
+<p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> M[3][100] = {{1,2,3},{0,1,4},{5,6,0}};</div>
+<div class="line"><span class="keywordtype">int</span> det = <a class="code hl_function" href="functions-1_8c.html#a1480227d96c89e746cd3ab04a41851b1">determinante</a>(M, 3);</div>
+<div class="ttc" id="afunctions-1_8c_html_a1480227d96c89e746cd3ab04a41851b1"><div class="ttname"><a href="functions-1_8c.html#a1480227d96c89e746cd3ab04a41851b1">determinante</a></div><div class="ttdeci">int determinante(int matriz[][], int n)</div><div class="ttdoc">Cálculo de uma matriz NxN.</div><div class="ttdef"><b>Definition</b> functions-1.c:432</div></div>
+</div><!-- fragment --><p>Calcula o determinante de uma matriz quadrada NxN.</p>
+<p>Esta função utiliza expansão por Laplace de forma recursiva para calcular o determinante de uma matriz quadrada de dimensão N. A cada passo, é criada uma submatriz (menor complementar) removendo a primeira linha e a coluna atual.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matriz</td><td>Matriz quadrada NxN cujos valores serão usados no cálculo. </td></tr>
+    <tr><td class="paramname">n</td><td>Dimensão atual da matriz (N &gt; 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Valor inteiro correspondente ao determinante da matriz. </dd></dl>
+
 </div>
 </div>
 <a id="afe49cd36796a261d1d0a6a2f0fdfdb41" name="afe49cd36796a261d1d0a6a2f0fdfdb41"></a>

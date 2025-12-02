@@ -205,4 +205,24 @@ int mdc(int a, int b);
  */
 void somaDeVetores(int A[], int N);
 
+
+/**
+ * @brief Calcula o determinante de uma matriz quadrada NxN.
+ *
+ * Esta função aplica a expansão por Laplace de forma recursiva
+ * para determinar o valor do determinante. A cada chamada, é construída
+ * uma submatriz menor removendo a primeira linha e uma coluna específica.
+ *
+ * @param matriz Matriz quadrada NxN usada no cálculo.
+ * @param n Dimensão atual da matriz.
+ * @return int Determinante da matriz.
+ *
+ * Exemplo de uso:
+ * @code
+ * int M[3][100] = {{1,2,3},{0,1,4},{5,6,0}};
+ * int det = determinante(M, 3);
+ * @endcode
+ */
+int determinante(int matriz[][], int n);
+
 #endif /* FUNCTIONS_1_H */
