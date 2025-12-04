@@ -26,7 +26,10 @@
  * - `media`: valor da média dos elementos
  * - `min`: valor mínimo encontrado
  *
- * @author Fernando
+ * @author Tiago Cardoso
+ * @author João Freitas
+ * @author Matheus Cipriano
+ * @author Fernando Oliveira
  * @date 2025
  */
 

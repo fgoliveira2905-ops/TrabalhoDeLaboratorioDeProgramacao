@@ -206,6 +206,8 @@ int mdc(int a, int b);
  */
 void somaDeVetores(int A[], int N);
 
+long long detLaplace(int, long long *);
+
 
 /**
  * @brief Calcula o determinante de uma matriz quadrada NxN.
@@ -241,8 +243,6 @@ void somaDeVetores(int A[], int N);
  */
 void matriz(int A[], int N);
 
-
-long long determinante(long long matriz[100][100], int N);
 
 
 

@@ -419,50 +419,63 @@ void somaDeVetores(int A[], int N) {
 }
 
 // Determinante recursivo seguro usando long long
-long long determinant(long long matrix[100][100], int n) {
-    if (n == 1) return matrix[0][0]; // caso base 1x1
-    if (n == 2) return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]; // caso 2x2
-
-    long long det = 0;
-    long long submatrix[100][100];
-    int sign = 1;
-
-    for (int k = 0; k < n; k++) {
-        int subi = 0;
-        for (int i = 1; i < n; i++) {
-            int subj = 0;
-            for (int j = 0; j < n; j++) {
-                if (j == k) continue;
-                submatrix[subi][subj] = matrix[i][j];
-                subj++;
+long long detLaplace(int n, long long a[100][100]){
+    if(n == 1){
+        //Caso base: matriz 1x1
+        return a[0][0];
+    }else{
+        long long det = 0;
+        int i, row, col, j_aux, i_aux;
+        
+        //Escolhe a primeira linha para calcular os cofatores
+        for(i = 0; i < n; i++){
+            //ignora os zeros (zero vezes qualquer número é igual zero)
+            if (a[0][i] != 0) {
+                long long aux[n - 1][n - 1];
+                i_aux = 0;
+                j_aux = 0;
+                //Gera as matrizes para calcular os cofatores
+                for(row = 1; row < n; row++){
+                    for(col = 0; col < n; col++){
+                        if(col != i){
+                            aux[i_aux][j_aux] = a[row][col];
+                            j_aux++;
+                        }
+                    }
+                    i_aux++;
+                    j_aux = 0;
+                }
+                long long factor = (i % 2 == 0)? a[0][i] : -a[0][i];
+                det = det + factor * detLaplace(n - 1, aux);
             }
-            subi++;
         }
-        det += sign * matrix[0][k] * determinant(submatrix, n - 1);
-        sign = -sign;
+        return det;
     }
-    return det;
 }
 
+//opção 9
 void matriz(int A[], int N) {
-    long long b[100];
+    
+    int b[N][1];
     long long matriz[100][100];
-    int i, k;
+    int i, k, j;
     int choice;
 
-    // Ler o novo vetor de N elementos fornecido pelo utilizador
-    printf("Insira um novo vetor de %d elementos:\n", N);
-    for (i = 0; i < N; i++) {
-        scanf("%lld", &b[i]);
-    }
-
-    // Matriz resultante do produto externo dos vetores
-    for (i = 0; i < N; i++) {
+    // ler array novo
+    printf("Insira um novo vetor: ");
+    for (i = 0; i < 1; i++) {
         for (k = 0; k < N; k++) {
-            matriz[i][k] = (long long)A[i] * b[k];
+            printf("Insira o elemento numero %d: ", k+1);
+            scanf("%d", &b[i][k]);
         }
     }
-
+    
+    //multiplica as matrizes para obter uma 14x14
+    for (i = 0; i < 14; i++) {
+           for (j = 0; j < 14; j++) {
+               matriz[i][j] = b[i][j] * A[j];
+           }
+       }
     // Escrever matriz
     printf("\nMatriz gerada:\n");
     for (i = 0; i < N; i++) {
@@ -473,26 +486,24 @@ void matriz(int A[], int N) {
     }
     printf("\n");
 
+    long long det = detLaplace(14, matriz);
+    
     // Pergunta ao usuário se deseja calcular o determinante
     do {
         printf("Pretende calcular o determinante dessa matriz?\n");
         printf("(1 - Sim / 2 - Nao): ");
+        scanf("%d", &choice);
 
-        int result = scanf("%d", &choice);
-
-        // Limpar buffer para evitar problemas com enter sobrando
-        while(getchar() != '\n');
-
-        if (result != 1 || (choice != 1 && choice != 2)) {
+        if (choice != 1 && choice != 2) {
             printf("Entrada inválida! Tente novamente.\n");
         }
 
     } while (choice != 1 && choice != 2);
-
+    
     if (choice == 1) {
-        long long det = determinant(matriz, N);
         printf("Determinante = %lld\n", det);
     } else {
         printf("Determinante não calculado.\n");
     }
 }
+
