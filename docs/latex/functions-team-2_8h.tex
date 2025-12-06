@@ -2,6 +2,7 @@
 \hypertarget{functions-team-2_8h}{}\label{functions-team-2_8h}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,10 +30,10 @@ int \mbox{\hyperlink{functions-team-2_8h_a0a30302f4720a1282e1b5fd5dbed015a}{mdc}
 \begin{DoxyCompactList}\small\item\em Calcula o máximo divisor comum (MDC) entre dois inteiros. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{functions-team-2_8h_a233cbe48916fe7cd74f20346b9cd152e}{soma\+De\+Vetores}} (int A\mbox{[}$\,$\mbox{]}, int N)
 \begin{DoxyCompactList}\small\item\em Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{functions-team-2_8h_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante}} (int \mbox{\hyperlink{functions-team-2_8h_ab4abe5d8de3d5051d23b4772376ae113}{matriz}}\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, int n)
-\begin{DoxyCompactList}\small\item\em Calcula o determinante de uma matriz quadrada NxN. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{functions-team-2_8h_ab4abe5d8de3d5051d23b4772376ae113}{matriz}} (int A\mbox{[}$\,$\mbox{]}, int N)
-\begin{DoxyCompactList}\small\item\em Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função. \end{DoxyCompactList}\end{DoxyCompactItemize}
+long long \mbox{\hyperlink{functions-team-2_8h_ac74579551b2acb8d3a76c7a0df43e752}{det\+Laplace}} (int n, long long a\mbox{[}n\mbox{]}\mbox{[}n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions-team-2_8h_a535831ae75a4654fea9f3707b07e076c}{matriz}} (int A\mbox{[}$\,$\mbox{]}, int N)
+\begin{DoxyCompactList}\small\item\em Calcula o determinante de uma matriz quadrada NxN. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
@@ -81,49 +82,25 @@ Exemplo de uso\+:
 \DoxyCodeLine{\mbox{\hyperlink{functions-team-2_8c_a6874eaf2bf059a4abc01b3ecfb030897}{calculoDaRaizQuadrada}}(vetor,\ 14);}
 
 \end{DoxyCode}
- \Hypertarget{functions-team-2_8h_ab90bcf7fda2fd8bf6992d104e35aebdc}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!determinante@{determinante}}
-\index{determinante@{determinante}!functions-\/team-\/2.h@{functions-\/team-\/2.h}}
-\doxysubsubsection{\texorpdfstring{determinante()}{determinante()}}
-{\footnotesize\ttfamily \label{functions-team-2_8h_ab90bcf7fda2fd8bf6992d104e35aebdc} 
-int determinante (\begin{DoxyParamCaption}\item[{int}]{matriz}{\mbox{[}$\,$\mbox{]}\mbox{[}100\mbox{]}, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+ \Hypertarget{functions-team-2_8h_ac74579551b2acb8d3a76c7a0df43e752}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!detLaplace@{detLaplace}}
+\index{detLaplace@{detLaplace}!functions-\/team-\/2.h@{functions-\/team-\/2.h}}
+\doxysubsubsection{\texorpdfstring{detLaplace()}{detLaplace()}}
+{\footnotesize\ttfamily \label{functions-team-2_8h_ac74579551b2acb8d3a76c7a0df43e752} 
+long long det\+Laplace (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{long long}]{a}{\mbox{[}n\mbox{]}\mbox{[}n\mbox{]}}\end{DoxyParamCaption})}
 
 
 
-Calcula o determinante de uma matriz quadrada NxN. 
-
-Esta função aplica a expansão por Laplace de forma recursiva para determinar o valor do determinante. A cada chamada, é construída uma submatriz menor removendo a primeira linha e uma coluna específica.
-
-
-\begin{DoxyParams}{Parameters}
-{\em matriz} & Matriz quadrada NxN usada no cálculo. \\
-\hline
-{\em n} & Dimensão atual da matriz. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-int Determinante da matriz.
-\end{DoxyReturn}
-Exemplo de uso\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ M[3][100]\ =\ \{\{1,2,3\},\{0,1,4\},\{5,6,0\}\};}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ det\ =\ \mbox{\hyperlink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante}}(M,\ 3);}
-
-\end{DoxyCode}
-
-
-Calcula o determinante de uma matriz quadrada NxN.
-
-Esta função utiliza expansão por Laplace de forma recursiva para calcular o determinante de uma matriz quadrada de dimensão N. A cada passo, é criada uma submatriz (menor complementar) removendo a primeira linha e a coluna atual.
+Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em matriz} & Matriz quadrada NxN cujos valores serão usados no cálculo. \\
+{\em n} & Dimensão atual da matriz (n x n). \\
 \hline
-{\em n} & Dimensão atual da matriz (N \texorpdfstring{$>$}{>} 1). \\
+{\em a} & Matriz quadrada n x n. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Valor inteiro correspondente ao determinante da matriz. 
+Determinante da matriz. 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8h_afe49cd36796a261d1d0a6a2f0fdfdb41}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!lerArray@{lerArray}}
 \index{lerArray@{lerArray}!functions-\/team-\/2.h@{functions-\/team-\/2.h}}
@@ -170,15 +147,37 @@ Exemplo de uso\+:
 \DoxyCodeLine{\mbox{\hyperlink{functions-team-2_8c_aaf4950dc84a65aaae3c7c46a55eb24e6}{maioresValoresDivisiveisPor5}}(vetor,\ 14);}
 
 \end{DoxyCode}
- \Hypertarget{functions-team-2_8h_ab4abe5d8de3d5051d23b4772376ae113}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!matriz@{matriz}}
+ \Hypertarget{functions-team-2_8h_a535831ae75a4654fea9f3707b07e076c}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!matriz@{matriz}}
 \index{matriz@{matriz}!functions-\/team-\/2.h@{functions-\/team-\/2.h}}
 \doxysubsubsection{\texorpdfstring{matriz()}{matriz()}}
-{\footnotesize\ttfamily \label{functions-team-2_8h_ab4abe5d8de3d5051d23b4772376ae113} 
-matriz (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{N}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{functions-team-2_8h_a535831ae75a4654fea9f3707b07e076c} 
+void matriz (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{N}{}\end{DoxyParamCaption})}
 
 
 
-Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função. 
+Calcula o determinante de uma matriz quadrada NxN. 
+
+Esta função aplica a expansão por Laplace de forma recursiva para determinar o valor do determinante. A cada chamada, é construída uma submatriz menor removendo a primeira linha e uma coluna específica.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & Matriz quadrada NxN usada no cálculo. \\
+\hline
+{\em n} & Dimensão atual da matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Determinante da matriz.
+\end{DoxyReturn}
+Exemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ M[3][100]\ =\ \{\{1,2,3\},\{0,1,4\},\{5,6,0\}\};}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ det\ =\ determinante(M,\ 3);}
+
+\end{DoxyCode}
+
+
+Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.
 
 
 \begin{DoxyParams}{Parameters}
@@ -193,27 +192,7 @@ Exemplo de uso\+:
 \DoxyCodeLine{*\mbox{\hyperlink{functions-team-2_8c_a535831ae75a4654fea9f3707b07e076c}{matriz}}(A,\ 5);}
 
 \end{DoxyCode}
-
-
-Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.
-
-Esta função lê um novo vetor {\ttfamily B} com {\ttfamily N} elementos, multiplica cada elemento do vetor original {\ttfamily A} pelo elemento correspondente de {\ttfamily B}, e armazena o resultado numa matriz quadrada {\ttfamily matriz} de dimensão NxN.
-
-Cada posição (i, j) da matriz é calculada como\+: matriz\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} = A\mbox{[}i\mbox{]} \texorpdfstring{$\ast$}{*} B\mbox{[}j\mbox{]}
-
-Após gerar a matriz, esta é impressa no ecrã. Em seguida, o utilizador pode escolher se deseja calcular o determinante da matriz. Caso a resposta seja \textquotesingle{}Y\textquotesingle{} ou \textquotesingle{}y\textquotesingle{}, a função \doxylink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante} é chamada para calcular o valor.
-
-
-\begin{DoxyParams}{Parameters}
-{\em A} & Vetor original utilizado no cálculo. \\
-\hline
-{\em N} & Número de elementos do vetor e dimensão da matriz quadrada.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyNote}{Note}
-Esta função depende da função \doxylink{functions-team-2_8c_ab90bcf7fda2fd8bf6992d104e35aebdc}{determinante} para o cálculo do determinante, caso o utilizador o solicite. 
-\end{DoxyNote}
-\Hypertarget{functions-team-2_8h_adfc58ace2b253bf3260180efd4201401}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!matrizDoisPorCatorze@{matrizDoisPorCatorze}}
+ \Hypertarget{functions-team-2_8h_adfc58ace2b253bf3260180efd4201401}\index{functions-\/team-\/2.h@{functions-\/team-\/2.h}!matrizDoisPorCatorze@{matrizDoisPorCatorze}}
 \index{matrizDoisPorCatorze@{matrizDoisPorCatorze}!functions-\/team-\/2.h@{functions-\/team-\/2.h}}
 \doxysubsubsection{\texorpdfstring{matrizDoisPorCatorze()}{matrizDoisPorCatorze()}}
 {\footnotesize\ttfamily \label{functions-team-2_8h_adfc58ace2b253bf3260180efd4201401} 

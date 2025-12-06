@@ -47,7 +47,7 @@ void lerArray(int *A, int tamanho);
  * int media = mediaArray(vetor, 14);
  * @endcode
  */
-int mediaArray(int *A, int tamanho);
+float mediaArray(int *A, int tamanho);
 
 /**
  * @brief Imprime os valores do vetor maiores que 2 e divisíveis por 5.
@@ -206,7 +206,14 @@ int mdc(int a, int b);
  */
 void somaDeVetores(int A[], int N);
 
-long long detLaplace(int, long long *);
+/**
+ * @brief Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace.
+ *
+ * @param n Dimensão atual da matriz (n x n).
+ * @param a Matriz quadrada n x n.
+ * @return Determinante da matriz.
+ */
+long long detLaplace(int n, long long a[n][n]);
 
 
 /**
@@ -241,9 +248,19 @@ long long detLaplace(int, long long *);
  *matriz(A, 5);
  *@endcode
  */
+
+int **SubMatrix(int **matriz, int o, int l, int c);
+// Cria matriz long long
+long long **CreateMatrixLongLong(int linhas, int colunas);
+
+// Multiplicação matricial clássica
+long long **MultipliMatrix(long long **Matriz_a, int la, int ca, long long **Matriz_b, int lb, int cb);
+
+// Determinante (usando eliminação Gaussiana)
+long long det(long long **matriz, int n);
+
+// Função da opção 9
 void matriz(int A[], int N);
 
+#endif
 
-
-
-#endif /* FUNCTIONS_1_H */

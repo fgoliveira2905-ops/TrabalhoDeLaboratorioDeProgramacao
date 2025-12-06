@@ -38,6 +38,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include "functions-team-2.h"
 
 /**
  * @brief Lê os valores de um vetor dentro de um intervalo específico.
@@ -418,92 +419,129 @@ void somaDeVetores(int A[], int N) {
     escreverArray(VetorSoma, N);
 }
 
-// Determinante recursivo seguro usando long long
-long long detLaplace(int n, long long a[100][100]){
-    if(n == 1){
-        //Caso base: matriz 1x1
-        return a[0][0];
-    }else{
-        long long det = 0;
-        int i, row, col, j_aux, i_aux;
-        
-        //Escolhe a primeira linha para calcular os cofatores
-        for(i = 0; i < n; i++){
-            //ignora os zeros (zero vezes qualquer número é igual zero)
-            if (a[0][i] != 0) {
-                long long aux[n - 1][n - 1];
-                i_aux = 0;
-                j_aux = 0;
-                //Gera as matrizes para calcular os cofatores
-                for(row = 1; row < n; row++){
-                    for(col = 0; col < n; col++){
-                        if(col != i){
-                            aux[i_aux][j_aux] = a[row][col];
-                            j_aux++;
-                        }
-                    }
-                    i_aux++;
-                    j_aux = 0;
-                }
-                long long factor = (i % 2 == 0)? a[0][i] : -a[0][i];
-                det = det + factor * detLaplace(n - 1, aux);
-            }
-        }
-        return det;
-    }
+//opção 9 a partir daqui
+
+// Cria matriz long long
+long long **CreateMatrixLongLong(int linhas, int colunas) {
+    long long **Matriz = (long long**)malloc(linhas * sizeof(long long*));
+    for (int i = 0; i < linhas; i++)
+        Matriz[i] = (long long*)malloc(colunas * sizeof(long long));
+    return Matriz;
 }
 
-//opção 9
-void matriz(int A[], int N) {
-    
-    int b[N][1];
-    long long matriz[100][100];
-    int i, k, j;
-    int choice;
+// Cria matriz long long
 
-    // ler array novo
-    printf("Insira um novo vetor: ");
-    for (i = 0; i < 1; i++) {
-        for (k = 0; k < N; k++) {
-            printf("Insira o elemento numero %d: ", k+1);
-            scanf("%d", &b[i][k]);
+// Multiplicação matricial
+long long **MultipliMatrix(long long **Matriz_a, int la, int ca, long long **Matriz_b, int lb, int cb) {
+    long long **resultado = CreateMatrixLongLong(la, cb);
+    for (int i = 0; i < la; i++)
+        for (int j = 0; j < cb; j++) {
+            resultado[i][j] = 0LL;
+            for (int w = 0; w < ca; w++)
+                resultado[i][j] += Matriz_a[i][w] * Matriz_b[w][j];
+        }
+    return resultado;
+}
+
+// Determinante usando long double para evitar overflow
+long long det(long long **matriz, int n) {
+    int i, j, r;
+    long double **A = malloc(n * sizeof(long double*));
+    for (i = 0; i < n; i++) {
+        A[i] = malloc(n * sizeof(long double));
+        for (j = 0; j < n; j++)
+            A[i][j] = (long double)matriz[i][j];
+    }
+
+    long double det_value = 1.0L;
+
+    for (i = 0; i < n; i++) {
+        int pivot = i;
+        for (r = i + 1; r < n; r++)
+            if (fabsl(A[r][i]) > fabsl(A[pivot][i])) pivot = r;
+
+        if (fabsl(A[pivot][i]) < 1e-12L) {
+            for (r = 0; r < n; r++) free(A[r]);
+            free(A);
+            return 0LL;
+        }
+
+        if (pivot != i) {
+            long double *tmp = A[i];
+            A[i] = A[pivot];
+            A[pivot] = tmp;
+            det_value = -det_value;
+        }
+
+        det_value *= A[i][i];
+        long double pivot_value = A[i][i];
+
+        for (r = i + 1; r < n; r++) {
+            long double factor = A[r][i] / pivot_value;
+            for (j = i; j < n; j++)
+                A[r][j] -= factor * A[i][j];
         }
     }
-    
-    //multiplica as matrizes para obter uma 14x14
-    for (i = 0; i < 14; i++) {
-           for (j = 0; j < 14; j++) {
-               matriz[i][j] = b[i][j] * A[j];
-           }
-       }
-    // Escrever matriz
-    printf("\nMatriz gerada:\n");
+
+    for (i = 0; i < n; i++) free(A[i]);
+    free(A);
+
+    return (long long)det_value;
+}
+
+//efetivamente opção 9
+void matriz(int A[], int N) {
+    int i, j;
+
+    // Ler vetor B
+    int B[14];
+    printf("Insira os 14 valores do novo vetor B:\n");
     for (i = 0; i < N; i++) {
-        for (k = 0; k < N; k++) {
-            printf("%lld ", matriz[i][k]);
-        }
+        printf("B[%d]: ", i+1);
+        scanf("%d", &B[i]);
+    }
+
+    // Criar matrizes long long compatíveis
+    long long **A_mat = CreateMatrixLongLong(N, N);
+    long long **B_mat = CreateMatrixLongLong(N, N);
+
+    // Preencher A_mat e B_mat de forma a gerar full rank sem valores muito grandes
+    for (i = 0; i < N; i++)
+        for (j = 0; j < N; j++)
+            A_mat[i][j] = (long long)A[i] + j;  // linha i = A[i] + j
+
+    for (i = 0; i < N; i++)
+        for (j = 0; j < N; j++)
+            B_mat[i][j] = (long long)B[j] + i;  // coluna j = B[j] + i
+
+    // Produto matricial
+    long long **M = MultipliMatrix(A_mat, N, N, B_mat, N, N);
+
+    // Imprimir matriz resultante
+    printf("\nMatriz resultante do produto:\n");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++)
+            printf("%lld ", M[i][j]);
         printf("\n");
     }
-    printf("\n");
 
-    long long det = detLaplace(14, matriz);
-    
-    // Pergunta ao usuário se deseja calcular o determinante
+    // Perguntar se deseja calcular determinante
+    int choice;
     do {
-        printf("Pretende calcular o determinante dessa matriz?\n");
-        printf("(1 - Sim / 2 - Nao): ");
+        printf("Pretende calcular o determinante dessa matriz? (1 - Sim / 2 - Nao): ");
         scanf("%d", &choice);
-
-        if (choice != 1 && choice != 2) {
-            printf("Entrada inválida! Tente novamente.\n");
-        }
-
     } while (choice != 1 && choice != 2);
-    
-    if (choice == 1) {
-        printf("Determinante = %lld\n", det);
-    } else {
-        printf("Determinante não calculado.\n");
-    }
-}
 
+    if (choice == 1) {
+        long long determinante = det(M, N); // det já usa long double internamente
+        printf("Determinante = %lld\n", determinante);
+    } else {
+        printf("Determinante nao calculado.\n");
+    }
+
+    // Libertar memória
+    for (i = 0; i < N; i++) {
+        free(A_mat[i]); free(B_mat[i]); free(M[i]);
+    }
+    free(A_mat); free(B_mat); free(M);
+}
