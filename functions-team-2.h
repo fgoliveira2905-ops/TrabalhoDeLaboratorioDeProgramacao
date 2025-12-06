@@ -249,18 +249,7 @@ long long detLaplace(int n, long long a[n][n]);
  *@endcode
  */
 
-int **SubMatrix(int **matriz, int o, int l, int c);
-// Cria matriz long long
-long long **CreateMatrixLongLong(int linhas, int colunas);
 
-// Multiplicação matricial clássica
-long long **MultipliMatrix(long long **Matriz_a, int la, int ca, long long **Matriz_b, int lb, int cb);
-
-// Determinante (usando eliminação Gaussiana)
-long long det(long long **matriz, int n);
-
-// Função da opção 9
-void matriz(int A[], int N);
 
 #endif
 

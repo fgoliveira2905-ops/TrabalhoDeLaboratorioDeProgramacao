@@ -101,7 +101,7 @@ int main(void) {
                 mmcDoVetor(A, N);
                 break;
             case 9:
-                matriz(A, N);
+                
                 break;
             case 10:
                 printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\nInserir outro numero: ");
