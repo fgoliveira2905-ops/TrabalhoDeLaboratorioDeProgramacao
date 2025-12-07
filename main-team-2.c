@@ -5,7 +5,7 @@
 #define MAX_SIZE 14
 
 /**
- * @file main.c
+ * @file main-team-2.c
  * @mainpage Trabalho de Laboratorio de Programação
  * @brief Programa principal que permite ao utilizador manipular um vetor de inteiros e executar várias operações.
  *
@@ -101,7 +101,7 @@ int main(void) {
                 mmcDoVetor(A, N);
                 break;
             case 9:
-                
+                ConstruirMatriz(A, N);
                 break;
             case 10:
                 printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\nInserir outro numero: ");

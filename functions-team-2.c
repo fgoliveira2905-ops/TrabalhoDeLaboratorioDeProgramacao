@@ -1,5 +1,5 @@
 /**
- * @file functions-1.c
+ * @file functions-team-2.c
  * @brief Funções utilitárias para manipulação de vetores e operações matemáticas.
  *
  * @mainpage
@@ -39,6 +39,26 @@
 #include <math.h>
 #include <stdlib.h>
 #include "functions-team-2.h"
+
+int **Array2D(int i, int j)
+{
+    int **Matriz = (int**)malloc(i * sizeof(int *));
+    for (int cont = 0; cont < i; cont++)
+        Matriz[cont] = (int*)malloc(j * sizeof(int));
+    return Matriz;
+}
+
+void escreverArray2D(int **Matriz, int l, int c)
+{
+    for (int i = 0; i < l; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            printf("%5d", Matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
 
 /**
  * @brief Lê os valores de um vetor dentro de um intervalo específico.
@@ -420,4 +440,67 @@ void somaDeVetores(int A[], int N) {
 }
 
 //opção 9 a partir daqui
+int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb)
+{
+    int **resultado = Array2D(la, cb);
+    for (int i = 0; i < la; i++)
+    {
+        for (int j = 0; j < cb; j++)
+        {
+            resultado[i][j] = 0;
+            for (int w = 0; w < ca; w++)
+            {
+                resultado[i][j] += (Matriz_a[i][w] * Matriz_b[w][j]);
+            }
+        }
+    }
+    return resultado;
+}
 
+
+
+void ConstruirMatriz(int *A_1D, int N) {
+    
+    int **B_matrix;
+    int **A_matrix;
+    int **matriz_result;
+    int i;
+    
+    //Aloca um espaço para o novo vetor
+    B_matrix = Array2D(N, 1);
+
+    // Allocate space for the 1 x N matrix A and copy elements from A_1D
+    A_matrix = Array2D(1, N);
+    for (i = 0; i < N; i++) {
+        A_matrix[0][i] = A_1D[i];
+    }
+    
+    printf("Insira o segundo vetor.\n");
+    for (i = 0; i < N; i++) {
+        printf("Insira o %d elemento do vetor: ", i+1);
+        scanf("%d", &B_matrix[i][0]);
+    }
+    
+    matriz_result = MultiplicarMatrizes(B_matrix, N, 1, A_matrix, 1, N);
+    printf("\n");
+    
+    printf("Matriz gerada:\n");
+    escreverArray2D(matriz_result, N, N);
+    
+    // Free allocated memory
+    for (i = 0; i < N; i++) {
+        free(B_matrix[i]);
+    }
+    free(B_matrix);
+
+    for (i = 0; i < 1; i++) { // Only one row for A_matrix
+        free(A_matrix[i]);
+    }
+    free(A_matrix);
+
+    // Free matriz_result as it's returned by Array2D
+    for (i = 0; i < N; i++) {
+        free(matriz_result[i]);
+    }
+    free(matriz_result);
+}

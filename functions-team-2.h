@@ -1,5 +1,5 @@
 /**
- * @file functions-1.h
+ * @file functions-team-2.h
  * @brief Declaração das funções auxiliares para manipulação de vetores e matrizes.
  *
  * Este arquivo contém as funções principais usadas pelo programa
@@ -19,6 +19,10 @@
 #include <stdio.h>
 #include <math.h>
 #include <ctype.h>
+
+int **Array2D(int i, int j);
+
+void escreverArray2D(int **Matriz, int l, int c);
 
 /**
  * @brief Lê elementos inteiros de um vetor do usuário.
@@ -234,21 +238,10 @@ long long detLaplace(int n, long long a[n][n]);
  * @endcode
  */
 
-/**
- *@brief
- *
- *Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.
- *
- *@param A vetores inseridos pelo usuário.
- *@param N Dimensão da matriz.
- *
- *Exemplo de uso:
- *@code
- *int A[5] = { 1, 2, 3, 4, 5 }
- *matriz(A, 5);
- *@endcode
- */
 
+int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb);
+
+void ConstruirMatriz(int *A, int N);
 
 
 #endif
