@@ -258,23 +258,32 @@ void matrizDoisPorCatorze(int A[], int tamanho) {
 /**
  * @brief Calcula a raiz quadrada de todos os elementos do vetor
  *
- *Esta função recebe um vetor "nome[]" e calcula a raiz quadrada de todos os elementos do vetor e transfere-os para um novo vetor "**matrizDaRaiz[]**"
+ *Esta função recebe o vetor "nome[]" e calcula a raiz quadrada de cada elemento, armazenando os resultados no vetor "matrizDaRaiz[]".
+ *O vetor "matrizDaRaiz[]" é do tipo float para garantir precisão ao representar as raízes calculadas.
  *
- *No final, imprime o novo vetor "matrizDaRaiz[]"
+ *No final, imprime o novo array "matrizDaRaiz[]"
  *
- * @param nome - Vetor original.
+ * @param nome - Array original.
  * @param tamanho - Número de elementos no vetor
  */
 void calculoDaRaizQuadrada(int nome[], int tamanho) {
     
-    int matrizDaRaiz[tamanho], i;
-    
+    float matrizDaRaiz[tamanho];
+    int i;
 
     for (i = 0; i < tamanho; i++) {
-        matrizDaRaiz[i] = sqrt(nome[i]);
+        if (nome[i] < 0) {
+            printf("O valor de %d não tem raiz real.\n", nome[i]);
+            matrizDaRaiz[i] = 0;
+        } else {
+            matrizDaRaiz[i] = sqrt(nome[i]);
+        }
     }
-
-    escreverArray(matrizDaRaiz, tamanho);
+    
+    for (i = 0; i < tamanho; i++) {
+        printf("%.2f ", matrizDaRaiz[i]);
+    }
+    printf("\n");
 }
 
 /**
