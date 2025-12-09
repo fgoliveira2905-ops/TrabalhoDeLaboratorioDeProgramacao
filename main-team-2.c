@@ -135,19 +135,19 @@ int main(void) {
 /**
  * @page funcoes Funções
  *
- * Nesta página encontra-se uma explicação geral das funções implementadas no
- * projeto, cada uma responsável por uma operação específica sobre o vetor.
- *
+ * Principais funções (presentes em `functions-team-2.c`):
  * Principais funções:
  *
  * - `mediaArray()` — calcula a média dos elementos do vetor.
  * - `maioresValoresDivisiveisPor5()` — devolve os valores maiores que 2 e divisíveis por 5.
  * - `vetorDecrescente()` — ordena o vetor por ordem decrescente.
  * - `matrizDoisPorCatorze()` — cria uma matriz 2x14 com o vetor original e o vetor ordenado.
- * - `calculoDaRaizQuadrada()` — calcula a raiz quadrada de todos os elementos.
+ * - `calculoDaRaizQuadrada()` — calcula a raiz quadrada de todos os elementos do vetor.
  * - `minimo()` — identifica o valor mínimo do vetor.
  * - `somaDeVetores()` - soma o vetor original pelo dobro de um novo vetor inserido pelo usuário.
- * - `determinante( )` - calcula o determinante de uma matriz NxN inserida pelo usuário
+ * -  `mmcDoVetor()` — calcula o mínimo múltiplo comum entre todos os pares consecutivos do vetor.
+ * - `ConstruirMatriz()` — cria a matriz 14x14 resultante do produto externo entre dois vetores.
+ * - `somaDeVetores()` — soma o vetor original com o dobro de um novo vetor inserido pelo utilizador.
  *
  * Estas funções encontram‑se definidas no ficheiro `functions-1.h` e implementadas
  * no ficheiro correspondente `.c`. Cada função possui documentação Doxygen
@@ -170,5 +170,6 @@ int main(void) {
  * - **MMC de pares de números:** cálculo do mínimo múltiplo comum entre elementos consecutivos.
  * - **Produto de vetores para formar matriz:** criação de uma matriz 14x14 a partir do vetor inicial.
  * - **Soma de um vetor pelo dobro de um segundo vetor inserido pelo usuário**
- *
+ * - **Mínimo Múltiplo Comum:** cálculo do mínimo múltiplo comum de dois elementos consecutivos de um vetor.
+ * - **Multiplicação de matrizes:** cálculo da múltiplicação de duas matrizes.
  */
