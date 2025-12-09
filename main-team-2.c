@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include "functions-team-2.h"
-#include <ctype.h>
 #define MAX_SIZE 14
 
 /**
@@ -39,7 +38,6 @@ int main(void) {
     int option;
     int media;
     int min;
-    int choice;
 
     /* Tela que pede que o ultilizador pressione ENTER para continuar */
     do {
@@ -135,27 +133,26 @@ int main(void) {
 /**
  * @page funcoes Funções
  *
- * Principais funções (presentes em `functions-team-2.c`):
- * Principais funções:
+ * Esta página descreve as principais funções disponibilizadas pelo programa,
+ * todas elas declaradas em `functions-team-2.h` e implementadas no respetivo
+ * ficheiro `.c`. As funções operam sobre um array de inteiros e permitem ao
+ * utilizador executar operações de processamento, análise e construção de matrizes.
  *
- * - `mediaArray()` — calcula a média dos elementos do vetor.
- * - `maioresValoresDivisiveisPor5()` — devolve os valores maiores que 2 e divisíveis por 5.
- * - `vetorDecrescente()` — ordena o vetor por ordem decrescente.
- * - `matrizDoisPorCatorze()` — cria uma matriz 2x14 com o vetor original e o vetor ordenado.
- * - `calculoDaRaizQuadrada()` — calcula a raiz quadrada de todos os elementos do vetor.
- * - `minimo()` — identifica o valor mínimo do vetor.
- * - `somaDeVetores()` - soma o vetor original pelo dobro de um novo vetor inserido pelo usuário.
- * -  `mmcDoVetor()` — calcula o mínimo múltiplo comum entre todos os pares consecutivos do vetor.
- * - `ConstruirMatriz()` — cria a matriz 14x14 resultante do produto externo entre dois vetores.
- * - `somaDeVetores()` — soma o vetor original com o dobro de um novo vetor inserido pelo utilizador.
+ * Lista de funções:
  *
- * Estas funções encontram‑se definidas no ficheiro `functions-1.h` e implementadas
- * no ficheiro correspondente `.c`. Cada função possui documentação Doxygen
- * detalhada com parâmetros, comportamento e valor retornado.
+ * - `mediaArray()` — calcula a média aritmética dos elementos do array.
+ * - `maioresValoresDivisiveisPor5()` — imprime valores maiores que 2 e divisíveis por 5.
+ * - `vetorDecrescente()` — ordena o array por ordem decrescente e imprime-o.
+ * - `matrizDoisPorCatorze()` — constrói uma matriz 2×N usando o array original e o ordenado.
+ * - `calculoDaRaizQuadrada()` — calcula e imprime a raiz quadrada para cada elemento.
+ * - `minimo()` — devolve o menor valor presente no array.
+ * - `mmcDoVetor()` — calcula o MMC para cada par consecutivo do array.
+ * - `mmc()` — calcula o mínimo múltiplo comum entre dois inteiros.
+ * - `mdc()` — calcula o máximo divisor comum entre dois inteiros.
+ * - `somaDeVetores()` — soma o array original com o dobro de um novo array introduzido.
+ * - `MultiplicarMatrizes()` — efetua a multiplicação entre duas matrizes.
+ * - `ConstruirMatriz()` — constrói a matriz 14×14 resultante do produto externo entre dois arrays.
  *
- */
-
-/**
  * @page operacoes_matematicas Operações Matemáticas
  *
  * Esta página descreve todas as operações matemáticas realizadas no âmbito do

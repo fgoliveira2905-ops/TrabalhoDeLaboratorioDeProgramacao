@@ -26,7 +26,7 @@
  * - vetorDecrescente()
  * - matrizDoisPorCatorze()
  * - calculoDaRaizQuadrada()
- * - determinante()
+ * - MultiplicarMatrizes()
  */
 
 /**
@@ -60,16 +60,6 @@ void escreverArray2D(int **Matriz, int l, int c)
     }
 }
 
-/**
- * @brief Lê os valores de um vetor dentro de um intervalo específico.
- *
- * Esta função solicita ao utilizador valores entre -5 e 32 e armazena-os
- * no vetor fornecido.
- *
- * @param nome - Vetor onde os valores serão armazenados.
- * @param tamanho - Número de elementos a serem lidos.
- */
-
 void lerArray(int nome[], int tamanho) {
     
     int i;
@@ -83,15 +73,6 @@ void lerArray(int nome[], int tamanho) {
     
 }
 
-/**
- * @brief Escreve no ecrã os elementos de um vetor.
- *
- * Imprime todos os valores do vetor separados por espaços.
- *
- * @param nome - Vetor a ser escrito.
- * @param tamanho - Número de elementos do vetor.
- */
-
 void escreverArray(int nome[], int tamanho) {
     
     int i;
@@ -101,16 +82,6 @@ void escreverArray(int nome[], int tamanho) {
     }
     printf("\n");
 }
-
-/**
- * @brief Calcula a média dos elementos de um vetor.
- *
- * Soma todos os elementos e divide pelo número total de posições.
- *
- * @param nome - Vetor cujos valores serão utilizados.
- * @param tamanho - Número de elementos do vetor.
- * @return Média dos valores presentes no vetor.
- */
 
 float mediaArray(int nome[], int tamanho) {
     
@@ -125,17 +96,6 @@ float mediaArray(int nome[], int tamanho) {
     
     return media;
 }
-
-
-/**
- * @brief Cria e escreve um vetor com valores maiores que 2 e divisíveis por 5.
- *
- * Filtra o vetor original e armazena apenas os elementos que são maiores
- * que 2 e múltiplos de 5, escrevendo o resultado no ecrã.
- *
- * @param A - Vetor original a ser filtrado.
- * @param tamanho - Número de elementos do vetor original.
- */
 
 void maioresValoresDivisiveisPor5(int A[], int tamanho) {
     int i, contador = 0;
@@ -164,16 +124,6 @@ void maioresValoresDivisiveisPor5(int A[], int tamanho) {
     free(validos);
 }
 
-/**
- * @brief Cria e escreve um vetor ordenado por ordem decrescente.
- *
- * Esta função recebe um vetor e cria um novo vetor B onde os elementos
- * aparecem por ordem decrescente a do vetor original. No fim, escreve o vetor
- * resultante no ecrã.
- *
- * @param nome - Vetor original.
- * @param tamanho - Número de elementos do vetor.
- */
 
 void vetorDecrescente(int nome[], int tamanho) {
     int *B = calloc(tamanho, sizeof(int));
@@ -199,20 +149,6 @@ void vetorDecrescente(int nome[], int tamanho) {
 
     free(B);
 }
-
-/**
- * @brief Cria uma matriz 2×N composta pelo vetor original e pelo vetor original ordenado por ordem crescente.
- *
- * Esta função recebe um vetor A, calcula o vetor B correspondente a A
- * ordenado por ordem crescente e cria uma matriz C com duas linhas:
- * - Linha 0: elementos do vetor A.
- * - Linha 1: elementos do vetor B.
- *
- * No final, imprime a matriz resultante.
- *
- * @param A - Vetor original.
- * @param tamanho - Número de elementos do vetor.
- */
 
 void matrizDoisPorCatorze(int A[], int tamanho) {
     int C[2][tamanho];
@@ -255,15 +191,6 @@ void matrizDoisPorCatorze(int A[], int tamanho) {
     free(B);
 }
 
-/**
- * @brief Calcula a média dos elementos de um vetor.
- *
- * Soma todos os elementos e divide pelo número total de posições.
- *
- * @param nome - Vetor cujos valores serão utilizados.
- * @param tamanho - Número de elementos do vetor.
- * @return Média dos valores presentes no vetor.
- */
 
 float mediaArray(int nome[], int tamanho) {
     
@@ -279,12 +206,6 @@ float mediaArray(int nome[], int tamanho) {
     return media;
 }
 
-/**
- *@brief Página de ajuda
- *
- *Esta função dá uma breve explicação do que cada opção que o usuário pode ultilizar fazer
- *
- */
 
 void ajuda(void) {
     printf("=== PAGINA DE AJUDA ===\n");
@@ -302,17 +223,6 @@ void ajuda(void) {
     printf("========================\n");
 }
 
-/**
- * @brief Devolve o valor mínimo do vetor
- *
- *Esta função recebe um vetor "nome[]" e compara todos os seus elementos.
- *
- * No final, devolve o valor mínimo entre os elementos do vetor
- *
- * @param A - Vetor original.
- * @param tamanho - Número de elementos no vetor
- * @return - O menor valor encontrado no vetor.
- */
 int minimo(int A[], int tamanho) {
     int min, i;
     
@@ -325,20 +235,6 @@ int minimo(int A[], int tamanho) {
     return min;
 }
 
-/**
- * @brief Devolve o valor do mínimo divisor comum de dois numeros inteiros.
- *
- *Esta função recebe um valor de @p a e @p b e então devolve o mínimo divisor comum entre esses
- *números ultilzando o Algoritmo de Euclides.
- *
- *@param a - Primeiro valor recebido.
- *@param b - Segundo valor recebido.
- *@return - Devolve só o valor de @p a
- *
- *@note No final do loop, se @p b = 0, então MDC(a, b) = a.
- *@see mmc() Para calcular o mínimo múltiplo comum usando o MDC.
- *@see mdcDoVetor() Essa função é apenas usada na função mdcDoVetor.
- * */
 int mdc(int a, int b) {
     int aux;
     
@@ -350,41 +246,10 @@ int mdc(int a, int b) {
     return a;
 }
 
-/**
- *@brief Devolve o valor do máximo múltiplo comum
- *
- *Está função depende da função mdc() para funcionar.
- *Ultiliza da fórmula mmc(a, b) = (a x b) / mdc(a, b) para calcular o máximo múltiplo comum.
- *
- *@param a - Primeiro valor recebido.
- *@param b - Segundo valor recebido.
- *@return - Devolve o valor do máximo múltiplo comum entre @p a e @p b.
- *
- *@see mdc() Essa função depende da função mdc() para funcionar.
- *@see mdcDoVetor() Essa função é apenas usada na função mdcDoVetor.
- */
-
 int mmc(int a, int b) {
     return (a * b)/mdc(a, b);
 }
 
-/**
- * @brief Calcula o mínimo múltiplo comum (MMC) de elementos consecutivos de um vetor.
- *
- * Esta função recebe um vetor @p A de inteiros e calcula o MMC de cada par de elementos
- * consecutivos, armazenando os resultados num vetor auxiliar @p B. Por fim, imprime
- * todos os valores calculados.
- *
- * @param A - Vetor de inteiros fornecido pelo usuário.
- * @param tamanho - Número de elementos do vetor @p A.
- *
- * @note O vetor resultante @p B terá tamanho igual a @p tamanho - 1,
- * pois cada elemento representa o MMC de um par de elementos consecutivos do vetor original.
- *
- * @note Essa função depende de da função mmc() e mdc().
- * @see mmc() Para calcular o mínimo múltiplo comum entre dois inteiros.
- * @see mdc() Para calcular o mínimo divisor comum entre dois inteiros.
- */
 void mmcDoVetor(int A[],int tamanho) {
     
     int i, *B;
@@ -401,21 +266,6 @@ void mmcDoVetor(int A[],int tamanho) {
     
 }
 
-/**
- * @brief Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador.
- *
- * Esta função lê um novo vetor @p B com @p N elementos fornecidos pelo utilizador,
- * duplica todos os seus valores e, em seguida, soma cada posição do vetor original @p A
- * com o vetor @p B já transformado.
- *
- * O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.
- *
- * @param A Vetor original.
- * @param N Número de elementos dos vetores.
- *
- * @note O vetor inserido pelo utilizador é modificado para conter o dobro dos seus valores
- * antes da operação de soma.
- */
 void somaDeVetores(int A[], int N) {
     int B[N];
     int i, VetorSoma[N];
@@ -441,27 +291,6 @@ void somaDeVetores(int A[], int N) {
     escreverArray(VetorSoma, N);
 }
 
-/**
- * @brief Multiplica duas matrizes e devolve a matriz resultante.
- *
- * Esta função recebe duas matrizes @p Matriz_a e @p Matriz_b, com as respetivas
- * dimensões, e calcula o produto matricial entre elas. A função aloca
- * dinamicamente uma nova matriz onde armazena o resultado.
- *
- * A multiplicação só é válida quando o número de colunas da primeira matriz
- * coincide com o número de linhas da segunda ( @p ca == @p lb ).
- *
- * @param Matriz_a Matriz da esquerda no produto.
- * @param la Número de linhas da primeira matriz.
- * @param ca Número de colunas da primeira matriz.
- * @param Matriz_b Matriz da direita no produto.
- * @param lb Número de linhas da segunda matriz.
- * @param cb Número de colunas da segunda matriz.
- *
- * @return Ponteiro para a nova matriz resultante com dimensões @p la × @p cb.
- *
- * @note A memória da matriz retornada deve ser libertada pelo chamador.
- */
 int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb)
 {
     int **resultado = Array2D(la, cb);
@@ -479,17 +308,6 @@ int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb
     return resultado;
 }
 
-
-/**
- *@brief Constrói um array de duas dimensões.
- *
- *@details Recebe um array de uma dimensão e aloca os seus elementos num array de duas dimensões (um por @p N ), posteriormente, recebe outro array de duas dimensões inserido pelo usuário (@p N por um) e multiplica esses arrays de modo a construir uma matriz @p N por @p N.
- *
- *No fim, mostra essa matriz para o usuário.
- *
- *@param A_1D - Array de uma dimensão recebido inicialmente
- *@param N - Numero de colunas do array @p A_1D .
- */
 void ConstruirMatriz(int *A_1D, int N) {
     
     int **B_matrix;

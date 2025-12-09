@@ -1,15 +1,16 @@
 /**
  * @file functions-team-2.h
- * @brief Declaração das funções auxiliares para manipulação de vetores e matrizes.
+ * @brief Declarações de funções auxiliares para manipulação de arrays e matrizes.
  *
- * Este arquivo contém as funções principais usadas pelo programa
- * principal para operações com vetores de inteiros, como cálculo de média,
- * ordenação, filtragem e construção de matrizes.
+ * Este ficheiro contém as interfaces das funções utilizadas no programa principal
+ * para leitura, processamento e apresentação de dados armazenados em arrays e
+ * matrizes de inteiros.
  *
- * @author Fernando Oliveira
- * @author Matheus Cipriano
- * @author João Miguel Freitas
- * @author Tiago Isac Cardoso
+ * As funções incluem cálculos numéricos, operações sobre arrays, construção de
+ * matrizes e outras utilidades.
+ *
+ * @authors Fernando Oliveira, Matheus Cipriano,
+ *          João Miguel Freitas, Tiago Isac Cardoso
  * @date 2025
  */
 
@@ -18,241 +19,169 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <ctype.h>
 
+/**
+ *@brief Recebe valores de um array de duas dimensões.
+ *
+ *Recebe o numero de linhas (@p i ) e o numero de colunas (@p j) e devolve um array de duas dimensões.
+ *
+ *@param i - Número de linhas do array.
+ *@param j - Número de colunas do array.
+ *@return Retorna um ponteiro para o array contruido.
+ */
 int **Array2D(int i, int j);
 
+/**
+ *@brief Escreve um array de duas dimensões.
+ *
+ *Recebe um array de duas dimensões (@p Matriz ), seu número de linhas (@p l ), seu número de colunas (@p c ) e imprime na tela o array.
+ *
+ *@param Matriz - Array de duas dimensões.
+ *@param l - Número de linhas do array.
+ *@param c - Número de colunas do arrray.
+ *@return void
+ */
 void escreverArray2D(int **Matriz, int l, int c);
 
 /**
- * @brief Lê elementos inteiros de um vetor do usuário.
+ * @brief Lê um array de inteiros a partir da entrada do utilizador.
  *
- * @param A - Ponteiro para o vetor a ser preenchido.
- * @param tamanho - Número de elementos do vetor.
+ * Preenche o array fornecido com valores introduzidos pelo utilizador.
  *
- * Exemplo de uso:
- * @code
- * int vetor[14];
- * lerArray(vetor, 14);
- * @endcode
+ * @param A Ponteiro para o array a preencher.
+ * @param tamanho Número de elementos a ler.
+ * @return void
  */
 void lerArray(int *A, int tamanho);
 
 /**
- * @brief Calcula a média dos elementos de um vetor de inteiros.
+ * @brief Calcula a média dos elementos de um array.
  *
- * @param A - Ponteiro para o vetor.
- * @param tamanho - Número de elementos do vetor.
- * @return int Média inteira dos elementos.
+ * A média é devolvida como valor em virgula flutuante.
  *
- * Exemplo de uso:
- * @code
- * int vetor[14] = {1,2,3,...};
- * int media = mediaArray(vetor, 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return float Média calculada.
  */
 float mediaArray(int *A, int tamanho);
 
 /**
- * @brief Imprime os valores do vetor maiores que 2 e divisíveis por 5.
+ * @brief Imprime valores maiores que 2 e divisíveis por 5.
  *
- * @param A - Ponteiro para o vetor.
- * @param tamanho - Número de elementos do vetor.
+ * Percorre o array e imprime apenas os valores que cumprem as condições.
  *
- * Exemplo de uso:
- * @code
- * maioresValoresDivisiveisPor5(vetor, 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return void
  */
 void maioresValoresDivisiveisPor5(int *A, int tamanho);
 
 /**
- * @brief Ordena e imprime o vetor em ordem decrescente.
+ * @brief Ordena e imprime o array em ordem decrescente.
  *
- * @param A - Ponteiro para o vetor.
- * @param tamanho - Número de elementos do vetor.
- *
- * Exemplo de uso:
- * @code
- * vetorDecrescente(vetor, 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return void
  */
 void vetorDecrescente(int *A, int tamanho);
 
 /**
- * @brief Constrói e imprime uma matriz 2x14.
+ * @brief Constrói e imprime uma matriz 2xN.
  *
- * A primeira linha contém o vetor original e a segunda linha o vetor
- * ordenado em ordem crescente.
+ * A primeira linha contém o array original e a segunda o array ordenado
+ * crescentemente.
  *
- * @param A - Ponteiro para o vetor original.
- * @param tamanho - Número de elementos do vetor.
- *
- * Exemplo de uso:
- * @code
- * matrizDoisPorCatorze(vetor, 14);
- * @endcode
+ * @param A Array original.
+ * @param tamanho Número de elementos.
+ * @return void
  */
 void matrizDoisPorCatorze(int *A, int tamanho);
 
 /**
- * @brief Calcula e imprime a raiz quadrada de cada elemento do vetor.
+ * @brief Calcula e imprime a raiz quadrada de cada elemento.
  *
- * @param A - Ponteiro para o vetor.
- * @param tamanho - Número de elementos do vetor.
- *
- * Exemplo de uso:
- * @code
- * calculoDaRaizQuadrada(vetor, 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return void
  */
 void calculoDaRaizQuadrada(int *A, int tamanho);
 
 /**
- * @brief Imprime instruções de ajuda para o usuário.
+ * @brief Imprime a ajuda do programa.
  *
- * Fornece informações sobre as funcionalidades do programa e como
- * utilizá-las.
- *
- * Exemplo de uso:
- * @code
- * ajuda();
- * @endcode
+ * @return void
  */
 void ajuda(void);
 
 /**
- * @brief Devolve o valor mínimo do vetor
+ * @brief Devolve o valor mínimo de um array.
  *
- * Compara todos os valores do vetor e devolve o menor deles.
- *
- * @param A - Ponteiro para o vetor original.
- * @param tamanho - Tamanho do vetor origianl.
- *
- * Exemplo de uso:
- * @code
- * minimo(vetor[], 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return int Menor valor encontrado.
  */
 int minimo(int *A, int tamanho);
 
 /**
- * @brief Calcula e imprime o mínimo múltiplo comum (MMC) de elementos consecutivos de um vetor.
+ * @brief Calcula o MMC entre pares consecutivos do array.
  *
- * Para cada par de elementos consecutivos do vetor @p A, calcula o MMC utilizando
- * a função @ref mmc() e armazena os resultados num vetor auxiliar, que é impresso.
- *
- * @param A - Vetor de inteiros.
- * @param tamanho - Número de elementos do vetor.
- *
- * Exemplo de uso:
- * @code
- * int vetor[14] = {4, 6, 8, 12, ...};
- * mdcDoVetor(vetor, 14);
- * @endcode
- *
- * @see mmc()
+ * @param A Array de inteiros.
+ * @param tamanho Número de elementos.
+ * @return void
  */
 void mmcDoVetor(int A[], int tamanho);
 
 /**
- * @brief Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.
- *
- * Recebe dois inteiros @p a e @p b e devolve o seu MMC, utilizando a relação
- * entre MMC e MDC.
+ * @brief Calcula o mínimo múltiplo comum entre dois inteiros.
  *
  * @param a Primeiro inteiro.
  * @param b Segundo inteiro.
- * @return int O mínimo múltiplo comum de @p a e @p b.
- *
- * Exemplo de uso:
- * @code
- * int resultado = mmc(6, 8); // resultado = 24
- * @endcode
- *
- * @see mdc()
+ * @return int MMC de a e b.
  */
 int mmc(int a, int b);
 
 /**
- * @brief Calcula o máximo divisor comum (MDC) entre dois inteiros.
- *
- * Recebe dois inteiros @p a e @p b e devolve o seu MDC utilizando o Algoritmo de Euclides.
+ * @brief Calcula o máximo divisor comum entre dois inteiros.
  *
  * @param a Primeiro inteiro.
  * @param b Segundo inteiro.
- * @return int O máximo divisor comum de @p a e @p b.
- *
- * Exemplo de uso:
- * @code
- * int resultado = mdc(12, 18); // resultado = 6
- * @endcode
- *
- * @see mmc()
+ * @return int MDC de a e b.
  */
 int mdc(int a, int b);
 
-
 /**
- * @brief Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.
+ * @brief Soma o array original com o dobro de um segundo array fornecido.
  *
- * Lê um novo vetor @p B com @p N elementos fornecidos pelo utilizador,
- * duplica cada um dos seus valores e soma cada posição de @p A com o vetor
- * já transformado. O resultado é armazenado num vetor auxiliar e impresso.
+ * Lê um array B, duplica os valores e soma à posição correspondente de A.
  *
- * @param A Vetor original.
- * @param N Número de elementos dos vetores.
- *
- * Exemplo de uso:
- * @code
- * somaDeVetores(vetor, 14);
- * @endcode
+ * @param A Array original.
+ * @param N Número de elementos.
+ * @return void
  */
 void somaDeVetores(int A[], int N);
-
 
 /**
  * @brief Multiplica duas matrizes.
  *
- * Recebe duas matrizes @p Matriz_a e @p Matriz_b, com dimensões
- * (@p la x @p ca) e (@p lb x @p cb), respetivamente, e devolve uma nova
- * matriz resultante da multiplicação matricial entre ambas.
  *
- * A função assume que o número de colunas da primeira matriz é igual
- * ao número de linhas da segunda. Caso contrário, o comportamento é
- * indefinido.
  *
  * @param Matriz_a Primeira matriz.
- * @param la Número de linhas da primeira matriz.
- * @param ca Número de colunas da primeira matriz.
+ * @param la Linhas da primeira matriz.
+ * @param ca Colunas da primeira matriz.
  * @param Matriz_b Segunda matriz.
- * @param lb Número de linhas da segunda matriz.
- * @param cb Número de colunas da segunda matriz.
- * @return int** Matriz resultante da multiplicação.
- *
- * Exemplo de uso:
- * @code
- * int **resultado = MultiplicarMatrizes(A, 2, 3, B, 3, 4);
- * @endcode
+ * @param lb Linhas da segunda matriz.
+ * @param cb Colunas da segunda matriz.
+ * @return int** Matriz resultante.
  */
 int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb);
 
 /**
- * @brief Constrói uma matriz quadrada a partir de um vetor.
+ * @brief Constrói e imprime uma matriz quadrada a partir de um array.
  *
- * Recebe um vetor @p A com @p N elementos e organiza seus valores
- * numa matriz quadrada de dimensão adequada (por exemplo, NxN ou outra
- * conforme implementado). A função imprime a matriz construída.
- *
- * @param A Vetor de inteiros utilizado para preencher a matriz.
- * @param N Número de elementos do vetor.
- *
- * Exemplo de uso:
- * @code
- * ConstruirMatriz(vetor, 14);
- * @endcode
+ * @param A Array de inteiros.
+ * @param N Número de elementos.
+ * @return void
  */
 void ConstruirMatriz(int *A, int N);
-
 
 #endif
