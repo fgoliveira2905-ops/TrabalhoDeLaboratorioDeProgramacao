@@ -441,7 +441,27 @@ void somaDeVetores(int A[], int N) {
     escreverArray(VetorSoma, N);
 }
 
-//opção 9 a partir daqui
+/**
+ * @brief Multiplica duas matrizes e devolve a matriz resultante.
+ *
+ * Esta função recebe duas matrizes @p Matriz_a e @p Matriz_b, com as respetivas
+ * dimensões, e calcula o produto matricial entre elas. A função aloca
+ * dinamicamente uma nova matriz onde armazena o resultado.
+ *
+ * A multiplicação só é válida quando o número de colunas da primeira matriz
+ * coincide com o número de linhas da segunda ( @p ca == @p lb ).
+ *
+ * @param Matriz_a Matriz da esquerda no produto.
+ * @param la Número de linhas da primeira matriz.
+ * @param ca Número de colunas da primeira matriz.
+ * @param Matriz_b Matriz da direita no produto.
+ * @param lb Número de linhas da segunda matriz.
+ * @param cb Número de colunas da segunda matriz.
+ *
+ * @return Ponteiro para a nova matriz resultante com dimensões @p la × @p cb.
+ *
+ * @note A memória da matriz retornada deve ser libertada pelo chamador.
+ */
 int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb)
 {
     int **resultado = Array2D(la, cb);
@@ -460,7 +480,16 @@ int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb
 }
 
 
-
+/**
+ *@brief Constrói um array de duas dimensões.
+ *
+ *@details Recebe um array de uma dimensão e aloca os seus elementos num array de duas dimensões (um por @p N ), posteriormente, recebe outro array de duas dimensões inserido pelo usuário (@p N por um) e multiplica esses arrays de modo a construir uma matriz @p N por @p N.
+ *
+ *No fim, mostra essa matriz para o usuário.
+ *
+ *@param A_1D - Array de uma dimensão recebido inicialmente
+ *@param N - Numero de colunas do array @p A_1D .
+ */
 void ConstruirMatriz(int *A_1D, int N) {
     
     int **B_matrix;
