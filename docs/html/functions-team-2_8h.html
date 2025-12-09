@@ -91,6 +91,9 @@ $(function(){initNavTree('functions-team-2_8h.html','',''); });
   <div class="headertitle"><div class="title">functions-team-2.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Declaração das funções auxiliares para manipulação de vetores e matrizes.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
@@ -99,10 +102,12 @@ $(function(){initNavTree('functions-team-2_8h.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa14b83796679879b381a1c5cde50604e" id="r_aa14b83796679879b381a1c5cde50604e"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa14b83796679879b381a1c5cde50604e">Array2D</a> (int i, int j)</td></tr>
+<tr class="memitem:a6509a3a8c63e8596ef0b081d61782d5c" id="r_a6509a3a8c63e8596ef0b081d61782d5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6509a3a8c63e8596ef0b081d61782d5c">escreverArray2D</a> (int **Matriz, int l, int c)</td></tr>
 <tr class="memitem:afe49cd36796a261d1d0a6a2f0fdfdb41" id="r_afe49cd36796a261d1d0a6a2f0fdfdb41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe49cd36796a261d1d0a6a2f0fdfdb41">lerArray</a> (int *A, int tamanho)</td></tr>
 <tr class="memdesc:afe49cd36796a261d1d0a6a2f0fdfdb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê elementos inteiros de um vetor do usuário.  <br /></td></tr>
-<tr class="memitem:ad758f9f8f4151c19ee9c6192a2e6d77a" id="r_ad758f9f8f4151c19ee9c6192a2e6d77a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad758f9f8f4151c19ee9c6192a2e6d77a">mediaArray</a> (int *A, int tamanho)</td></tr>
-<tr class="memdesc:ad758f9f8f4151c19ee9c6192a2e6d77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a média dos elementos de um vetor de inteiros.  <br /></td></tr>
+<tr class="memitem:a9961d81f26dd4601406a6b7e8881213b" id="r_a9961d81f26dd4601406a6b7e8881213b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9961d81f26dd4601406a6b7e8881213b">mediaArray</a> (int *A, int tamanho)</td></tr>
+<tr class="memdesc:a9961d81f26dd4601406a6b7e8881213b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a média dos elementos de um vetor de inteiros.  <br /></td></tr>
 <tr class="memitem:abaaf22c118c6f0e05138c7880cc40374" id="r_abaaf22c118c6f0e05138c7880cc40374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaaf22c118c6f0e05138c7880cc40374">maioresValoresDivisiveisPor5</a> (int *A, int tamanho)</td></tr>
 <tr class="memdesc:abaaf22c118c6f0e05138c7880cc40374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime os valores do vetor maiores que 2 e divisíveis por 5.  <br /></td></tr>
 <tr class="memitem:a46077a303703530a95f73d709620867e" id="r_a46077a303703530a95f73d709620867e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46077a303703530a95f73d709620867e">vetorDecrescente</a> (int *A, int tamanho)</td></tr>
@@ -123,12 +128,23 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0a30302f4720a1282e1b5fd5dbed015a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o máximo divisor comum (MDC) entre dois inteiros.  <br /></td></tr>
 <tr class="memitem:a233cbe48916fe7cd74f20346b9cd152e" id="r_a233cbe48916fe7cd74f20346b9cd152e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a> (int A[], int N)</td></tr>
 <tr class="memdesc:a233cbe48916fe7cd74f20346b9cd152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.  <br /></td></tr>
-<tr class="memitem:ac74579551b2acb8d3a76c7a0df43e752" id="r_ac74579551b2acb8d3a76c7a0df43e752"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac74579551b2acb8d3a76c7a0df43e752">detLaplace</a> (int n, long long a[n][n])</td></tr>
-<tr class="memdesc:ac74579551b2acb8d3a76c7a0df43e752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace.  <br /></td></tr>
-<tr class="memitem:a535831ae75a4654fea9f3707b07e076c" id="r_a535831ae75a4654fea9f3707b07e076c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535831ae75a4654fea9f3707b07e076c">matriz</a> (int A[], int N)</td></tr>
-<tr class="memdesc:a535831ae75a4654fea9f3707b07e076c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o determinante de uma matriz quadrada NxN.  <br /></td></tr>
+<tr class="memitem:a614426b198a46a2adbdbd8633b2d3170" id="r_a614426b198a46a2adbdbd8633b2d3170"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a614426b198a46a2adbdbd8633b2d3170">MultiplicarMatrizes</a> (int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb)</td></tr>
+<tr class="memdesc:a614426b198a46a2adbdbd8633b2d3170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplica duas matrizes.  <br /></td></tr>
+<tr class="memitem:ae53eb7be79d1506686ccb779f03d5764" id="r_ae53eb7be79d1506686ccb779f03d5764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae53eb7be79d1506686ccb779f03d5764">ConstruirMatriz</a> (int *A, int N)</td></tr>
+<tr class="memdesc:ae53eb7be79d1506686ccb779f03d5764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrói uma matriz quadrada a partir de um vetor.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Declaração das funções auxiliares para manipulação de vetores e matrizes. </p>
+<p>Este arquivo contém as funções principais usadas pelo programa principal para operações com vetores de inteiros, como cálculo de média, ordenação, filtragem e construção de matrizes.</p>
+<dl class="section author"><dt>Author</dt><dd>Fernando Oliveira </dd>
+<dd>
+Matheus Cipriano </dd>
+<dd>
+João Miguel Freitas </dd>
+<dd>
+Tiago Isac Cardoso </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ac7c9e1438208537d4308112b49ea014c" name="ac7c9e1438208537d4308112b49ea014c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7c9e1438208537d4308112b49ea014c">&#9670;&#160;</a></span>ajuda()</h2>
 
@@ -147,9 +163,30 @@ Functions</h2></td></tr>
 <p>Imprime instruções de ajuda para o usuário. </p>
 <p>Fornece informações sobre as funcionalidades do programa e como utilizá-las.</p>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#ac7c9e1438208537d4308112b49ea014c">ajuda</a>();</div>
-<div class="ttc" id="afunctions-team-2_8c_html_ac7c9e1438208537d4308112b49ea014c"><div class="ttname"><a href="functions-team-2_8c.html#ac7c9e1438208537d4308112b49ea014c">ajuda</a></div><div class="ttdeci">void ajuda(void)</div><div class="ttdoc">Página de ajuda.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:266</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_ac7c9e1438208537d4308112b49ea014c"><div class="ttname"><a href="functions-team-2_8c.html#ac7c9e1438208537d4308112b49ea014c">ajuda</a></div><div class="ttdeci">void ajuda(void)</div><div class="ttdoc">Página de ajuda.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:289</div></div>
 </div><!-- fragment --><p>Imprime instruções de ajuda para o usuário.</p>
 <p>Esta função dá uma breve explicação do que cada opção que o usuário pode ultilizar fazer </p>
+
+</div>
+</div>
+<a id="aa14b83796679879b381a1c5cde50604e" name="aa14b83796679879b381a1c5cde50604e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14b83796679879b381a1c5cde50604e">&#9670;&#160;</a></span>Array2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ** Array2D </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -180,39 +217,77 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a6874eaf2bf059a4abc01b3ecfb030897">calculoDaRaizQuadrada</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a6874eaf2bf059a4abc01b3ecfb030897"><div class="ttname"><a href="functions-team-2_8c.html#a6874eaf2bf059a4abc01b3ecfb030897">calculoDaRaizQuadrada</a></div><div class="ttdeci">void calculoDaRaizQuadrada(int nome[], int tamanho)</div><div class="ttdoc">Calcula a raiz quadrada de todos os elementos do vetor.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:247</div></div>
+<p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a306e81b7dc4188518aed66d290bf2c46">calculoDaRaizQuadrada</a>(vetor, 14);</div>
+<div class="ttc" id="afunctions-team-2_8h_html_a306e81b7dc4188518aed66d290bf2c46"><div class="ttname"><a href="#a306e81b7dc4188518aed66d290bf2c46">calculoDaRaizQuadrada</a></div><div class="ttdeci">void calculoDaRaizQuadrada(int *A, int tamanho)</div><div class="ttdoc">Calcula e imprime a raiz quadrada de cada elemento do vetor.</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ac74579551b2acb8d3a76c7a0df43e752" name="ac74579551b2acb8d3a76c7a0df43e752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac74579551b2acb8d3a76c7a0df43e752">&#9670;&#160;</a></span>detLaplace()</h2>
+<a id="ae53eb7be79d1506686ccb779f03d5764" name="ae53eb7be79d1506686ccb779f03d5764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53eb7be79d1506686ccb779f03d5764">&#9670;&#160;</a></span>ConstruirMatriz()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long long detLaplace </td>
+          <td class="memname">void ConstruirMatriz </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>A_1D</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long long</td>          <td class="paramname"><span class="paramname"><em>a</em></span>[n][n]&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>N</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace. </p>
+<p>Constrói uma matriz quadrada a partir de um vetor. </p>
+<p>Recebe um vetor <code class="param">A</code> com <code class="param">N</code> elementos e organiza seus valores numa matriz quadrada de dimensão adequada (por exemplo, NxN ou outra conforme implementado). A função imprime a matriz construída.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>Dimensão atual da matriz (n x n). </td></tr>
-    <tr><td class="paramname">a</td><td>Matriz quadrada n x n. </td></tr>
+    <tr><td class="paramname">A</td><td>Vetor de inteiros utilizado para preencher a matriz. </td></tr>
+    <tr><td class="paramname">N</td><td>Número de elementos do vetor.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Determinante da matriz. </dd></dl>
+<p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a3bb3ab256d91f1d2593f26e8502dfca8">ConstruirMatriz</a>(vetor, 14);</div>
+<div class="ttc" id="afunctions-team-2_8c_html_a3bb3ab256d91f1d2593f26e8502dfca8"><div class="ttname"><a href="functions-team-2_8c.html#a3bb3ab256d91f1d2593f26e8502dfca8">ConstruirMatriz</a></div><div class="ttdeci">void ConstruirMatriz(int *A_1D, int N)</div><div class="ttdoc">Constrói um array de duas dimensões.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:493</div></div>
+</div><!-- fragment --><p>Constrói uma matriz quadrada a partir de um vetor.</p>
+<p>Recebe um array de uma dimensão e aloca os seus elementos num array de duas dimensões (um por <code class="param">N</code> ), posteriormente, recebe outro array de duas dimensões inserido pelo usuário (<code class="param">N</code> por um) e multiplica esses arrays de modo a construir uma matriz <code class="param">N</code> por <code class="param">N</code>.</p>
+<p>No fim, mostra essa matriz para o usuário.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A_1D</td><td>- Array de uma dimensão recebido inicialmente </td></tr>
+    <tr><td class="paramname">N</td><td>- Numero de colunas do array <code class="param">A_1D</code> . </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6509a3a8c63e8596ef0b081d61782d5c" name="a6509a3a8c63e8596ef0b081d61782d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6509a3a8c63e8596ef0b081d61782d5c">&#9670;&#160;</a></span>escreverArray2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escreverArray2D </td>
+          <td>(</td>
+          <td class="paramtype">int **</td>          <td class="paramname"><span class="paramname"><em>Matriz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -245,7 +320,7 @@ Functions</h2></td></tr>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> vetor[14];</div>
 <div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a211274a7a16d67fc1337305d5daa4c61">lerArray</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a211274a7a16d67fc1337305d5daa4c61"><div class="ttname"><a href="functions-team-2_8c.html#a211274a7a16d67fc1337305d5daa4c61">lerArray</a></div><div class="ttdeci">void lerArray(int nome[], int tamanho)</div><div class="ttdoc">Lê os valores de um vetor dentro de um intervalo específico.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:52</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_a211274a7a16d67fc1337305d5daa4c61"><div class="ttname"><a href="functions-team-2_8c.html#a211274a7a16d67fc1337305d5daa4c61">lerArray</a></div><div class="ttdeci">void lerArray(int nome[], int tamanho)</div><div class="ttdoc">Lê os valores de um vetor dentro de um intervalo específico.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:73</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -277,52 +352,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#aaf4950dc84a65aaae3c7c46a55eb24e6">maioresValoresDivisiveisPor5</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_aaf4950dc84a65aaae3c7c46a55eb24e6"><div class="ttname"><a href="functions-team-2_8c.html#aaf4950dc84a65aaae3c7c46a55eb24e6">maioresValoresDivisiveisPor5</a></div><div class="ttdeci">void maioresValoresDivisiveisPor5(int A[], int tamanho)</div><div class="ttdoc">Cria e escreve um vetor com valores maiores que 2 e divisíveis por 5.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:119</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a535831ae75a4654fea9f3707b07e076c" name="a535831ae75a4654fea9f3707b07e076c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a535831ae75a4654fea9f3707b07e076c">&#9670;&#160;</a></span>matriz()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void matriz </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>A</em></span>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>N</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calcula o determinante de uma matriz quadrada NxN. </p>
-<p>Esta função aplica a expansão por Laplace de forma recursiva para determinar o valor do determinante. A cada chamada, é construída uma submatriz menor removendo a primeira linha e uma coluna específica.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">matriz</td><td>Matriz quadrada NxN usada no cálculo. </td></tr>
-    <tr><td class="paramname">n</td><td>Dimensão atual da matriz. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int Determinante da matriz.</dd></dl>
-<p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> M[3][100] = {{1,2,3},{0,1,4},{5,6,0}};</div>
-<div class="line"><span class="keywordtype">int</span> det = determinante(M, 3);</div>
-</div><!-- fragment --><p>Esta função calcula uma matriz 14x14 resultante do vetor inserido inicialmente pelo usuário e de um segundo com o mesmo numero de elementos lido pela função.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">A</td><td>vetores inseridos pelo usuário. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensão da matriz.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Exemplo de uso: </p><div class="fragment"><div class="line">*<span class="keywordtype">int</span> A[5] = { 1, 2, 3, 4, 5 }</div>
-<div class="line">*<a class="code hl_function" href="functions-team-2_8c.html#a535831ae75a4654fea9f3707b07e076c">matriz</a>(A, 5);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a535831ae75a4654fea9f3707b07e076c"><div class="ttname"><a href="functions-team-2_8c.html#a535831ae75a4654fea9f3707b07e076c">matriz</a></div><div class="ttdeci">void matriz(int A[], int N)</div><div class="ttdoc">Calcula o determinante de uma matriz quadrada NxN.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:457</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_aaf4950dc84a65aaae3c7c46a55eb24e6"><div class="ttname"><a href="functions-team-2_8c.html#aaf4950dc84a65aaae3c7c46a55eb24e6">maioresValoresDivisiveisPor5</a></div><div class="ttdeci">void maioresValoresDivisiveisPor5(int A[], int tamanho)</div><div class="ttdoc">Cria e escreve um vetor com valores maiores que 2 e divisíveis por 5.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:140</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -355,7 +385,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#ad9b24c08424a9ad689669a157de42df1">matrizDoisPorCatorze</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_ad9b24c08424a9ad689669a157de42df1"><div class="ttname"><a href="functions-team-2_8c.html#ad9b24c08424a9ad689669a157de42df1">matrizDoisPorCatorze</a></div><div class="ttdeci">void matrizDoisPorCatorze(int A[], int tamanho)</div><div class="ttdoc">Cria uma matriz 2×N composta pelo vetor original e pelo vetor original ordenado por ordem crescente.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:196</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_ad9b24c08424a9ad689669a157de42df1"><div class="ttname"><a href="functions-team-2_8c.html#ad9b24c08424a9ad689669a157de42df1">matrizDoisPorCatorze</a></div><div class="ttdeci">void matrizDoisPorCatorze(int A[], int tamanho)</div><div class="ttdoc">Cria uma matriz 2×N composta pelo vetor original e pelo vetor original ordenado por ordem crescente.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:217</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -389,7 +419,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int O máximo divisor comum de <code class="param">a</code> e <code class="param">b</code>.</dd></dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> resultado = <a class="code hl_function" href="functions-team-2_8c.html#a0a30302f4720a1282e1b5fd5dbed015a">mdc</a>(12, 18); <span class="comment">// resultado = 6</span></div>
-<div class="ttc" id="afunctions-team-2_8c_html_a0a30302f4720a1282e1b5fd5dbed015a"><div class="ttname"><a href="functions-team-2_8c.html#a0a30302f4720a1282e1b5fd5dbed015a">mdc</a></div><div class="ttdeci">int mdc(int a, int b)</div><div class="ttdoc">Devolve o valor do mínimo divisor comum de dois numeros inteiros.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:319</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_a0a30302f4720a1282e1b5fd5dbed015a"><div class="ttname"><a href="functions-team-2_8c.html#a0a30302f4720a1282e1b5fd5dbed015a">mdc</a></div><div class="ttdeci">int mdc(int a, int b)</div><div class="ttdoc">Devolve o valor do mínimo divisor comum de dois numeros inteiros.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:342</div></div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa3d7c552c82bafc4972a6cb1605b028e" title="Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.">mmc()</a></dd></dl>
 <p>Calcula o máximo divisor comum (MDC) entre dois inteiros.</p>
 <p>Esta função recebe um valor de <code class="param">a</code> e <code class="param">b</code> e então devolve o mínimo divisor comum entre esses números ultilzando o Algoritmo de Euclides.</p>
@@ -408,14 +438,14 @@ mdcDoVetor() Essa função é apenas usada na função mdcDoVetor. </dd></dl>
 
 </div>
 </div>
-<a id="ad758f9f8f4151c19ee9c6192a2e6d77a" name="ad758f9f8f4151c19ee9c6192a2e6d77a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad758f9f8f4151c19ee9c6192a2e6d77a">&#9670;&#160;</a></span>mediaArray()</h2>
+<a id="a9961d81f26dd4601406a6b7e8881213b" name="a9961d81f26dd4601406a6b7e8881213b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9961d81f26dd4601406a6b7e8881213b">&#9670;&#160;</a></span>mediaArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int mediaArray </td>
+          <td class="memname">float mediaArray </td>
           <td>(</td>
           <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
         </tr>
@@ -438,7 +468,7 @@ mdcDoVetor() Essa função é apenas usada na função mdcDoVetor. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>int Média inteira dos elementos.</dd></dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> vetor[14] = {1,2,3,...};</div>
 <div class="line"><span class="keywordtype">int</span> media = <a class="code hl_function" href="functions-team-2_8c.html#ac17adb8b1b8b675aa4566658becdaed9">mediaArray</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_ac17adb8b1b8b675aa4566658becdaed9"><div class="ttname"><a href="functions-team-2_8c.html#ac17adb8b1b8b675aa4566658becdaed9">mediaArray</a></div><div class="ttdeci">float mediaArray(int nome[], int tamanho)</div><div class="ttdoc">Calcula a média dos elementos de um vetor.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:94</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_ac17adb8b1b8b675aa4566658becdaed9"><div class="ttname"><a href="functions-team-2_8c.html#ac17adb8b1b8b675aa4566658becdaed9">mediaArray</a></div><div class="ttdeci">float mediaArray(int nome[], int tamanho)</div><div class="ttdoc">Calcula a média dos elementos de um vetor.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:115</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -471,7 +501,7 @@ mdcDoVetor() Essa função é apenas usada na função mdcDoVetor. </dd></dl>
   </dd>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a2befbe8b2f5e26a7c293869fec2b1e87">minimo</a>(vetor[], 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a2befbe8b2f5e26a7c293869fec2b1e87"><div class="ttname"><a href="functions-team-2_8c.html#a2befbe8b2f5e26a7c293869fec2b1e87">minimo</a></div><div class="ttdeci">int minimo(int A[], int tamanho)</div><div class="ttdoc">Devolve o valor mínimo do vetor.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:293</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_a2befbe8b2f5e26a7c293869fec2b1e87"><div class="ttname"><a href="functions-team-2_8c.html#a2befbe8b2f5e26a7c293869fec2b1e87">minimo</a></div><div class="ttdeci">int minimo(int A[], int tamanho)</div><div class="ttdoc">Devolve o valor mínimo do vetor.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:316</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -505,7 +535,7 @@ mdcDoVetor() Essa função é apenas usada na função mdcDoVetor. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int O mínimo múltiplo comum de <code class="param">a</code> e <code class="param">b</code>.</dd></dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> resultado = <a class="code hl_function" href="functions-team-2_8c.html#aa3d7c552c82bafc4972a6cb1605b028e">mmc</a>(6, 8); <span class="comment">// resultado = 24</span></div>
-<div class="ttc" id="afunctions-team-2_8c_html_aa3d7c552c82bafc4972a6cb1605b028e"><div class="ttname"><a href="functions-team-2_8c.html#aa3d7c552c82bafc4972a6cb1605b028e">mmc</a></div><div class="ttdeci">int mmc(int a, int b)</div><div class="ttdoc">Devolve o valor do máximo múltiplo comum.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:344</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_aa3d7c552c82bafc4972a6cb1605b028e"><div class="ttname"><a href="functions-team-2_8c.html#aa3d7c552c82bafc4972a6cb1605b028e">mmc</a></div><div class="ttdeci">int mmc(int a, int b)</div><div class="ttdoc">Devolve o valor do máximo múltiplo comum.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:367</div></div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0a30302f4720a1282e1b5fd5dbed015a" title="Calcula o máximo divisor comum (MDC) entre dois inteiros.">mdc()</a></dd></dl>
 <p>Calcula o mínimo múltiplo comum (MMC) entre dois inteiros.</p>
 <p>Está função depende da função <a class="el" href="#a0a30302f4720a1282e1b5fd5dbed015a" title="Calcula o máximo divisor comum (MDC) entre dois inteiros.">mdc()</a> para funcionar. Ultiliza da fórmula mmc(a, b) = (a x b) / mdc(a, b) para calcular o máximo múltiplo comum.</p>
@@ -572,6 +602,81 @@ Essa função depende de da função <a class="el" href="#aa3d7c552c82bafc4972a6
 
 </div>
 </div>
+<a id="a614426b198a46a2adbdbd8633b2d3170" name="a614426b198a46a2adbdbd8633b2d3170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614426b198a46a2adbdbd8633b2d3170">&#9670;&#160;</a></span>MultiplicarMatrizes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ** MultiplicarMatrizes </td>
+          <td>(</td>
+          <td class="paramtype">int **</td>          <td class="paramname"><span class="paramname"><em>Matriz_a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>la</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ca</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int **</td>          <td class="paramname"><span class="paramname"><em>Matriz_b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplica duas matrizes. </p>
+<p>Recebe duas matrizes <code class="param">Matriz_a</code> e <code class="param">Matriz_b</code>, com dimensões (<code class="param">la</code> x <code class="param">ca</code>) e (<code class="param">lb</code> x <code class="param">cb</code>), respetivamente, e devolve uma nova matriz resultante da multiplicação matricial entre ambas.</p>
+<p>A função assume que o número de colunas da primeira matriz é igual ao número de linhas da segunda. Caso contrário, o comportamento é indefinido.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Matriz_a</td><td>Primeira matriz. </td></tr>
+    <tr><td class="paramname">la</td><td>Número de linhas da primeira matriz. </td></tr>
+    <tr><td class="paramname">ca</td><td>Número de colunas da primeira matriz. </td></tr>
+    <tr><td class="paramname">Matriz_b</td><td>Segunda matriz. </td></tr>
+    <tr><td class="paramname">lb</td><td>Número de linhas da segunda matriz. </td></tr>
+    <tr><td class="paramname">cb</td><td>Número de colunas da segunda matriz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int** Matriz resultante da multiplicação.</dd></dl>
+<p>Exemplo de uso: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> **resultado = <a class="code hl_function" href="functions-team-2_8c.html#a614426b198a46a2adbdbd8633b2d3170">MultiplicarMatrizes</a>(A, 2, 3, B, 3, 4);</div>
+<div class="ttc" id="afunctions-team-2_8c_html_a614426b198a46a2adbdbd8633b2d3170"><div class="ttname"><a href="functions-team-2_8c.html#a614426b198a46a2adbdbd8633b2d3170">MultiplicarMatrizes</a></div><div class="ttdeci">int ** MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb)</div><div class="ttdoc">Multiplica duas matrizes e devolve a matriz resultante.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:465</div></div>
+</div><!-- fragment --><p>Multiplica duas matrizes.</p>
+<p>Esta função recebe duas matrizes <code class="param">Matriz_a</code> e <code class="param">Matriz_b</code>, com as respetivas dimensões, e calcula o produto matricial entre elas. A função aloca dinamicamente uma nova matriz onde armazena o resultado.</p>
+<p>A multiplicação só é válida quando o número de colunas da primeira matriz coincide com o número de linhas da segunda ( <code class="param">ca</code> == <code class="param">lb</code> ).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Matriz_a</td><td>Matriz da esquerda no produto. </td></tr>
+    <tr><td class="paramname">la</td><td>Número de linhas da primeira matriz. </td></tr>
+    <tr><td class="paramname">ca</td><td>Número de colunas da primeira matriz. </td></tr>
+    <tr><td class="paramname">Matriz_b</td><td>Matriz da direita no produto. </td></tr>
+    <tr><td class="paramname">lb</td><td>Número de linhas da segunda matriz. </td></tr>
+    <tr><td class="paramname">cb</td><td>Número de colunas da segunda matriz.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ponteiro para a nova matriz resultante com dimensões <code class="param">la</code> × <code class="param">cb</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A memória da matriz retornada deve ser libertada pelo chamador. </dd></dl>
+
+</div>
+</div>
 <a id="a233cbe48916fe7cd74f20346b9cd152e" name="a233cbe48916fe7cd74f20346b9cd152e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a233cbe48916fe7cd74f20346b9cd152e">&#9670;&#160;</a></span>somaDeVetores()</h2>
 
@@ -601,7 +706,7 @@ Essa função depende de da função <a class="el" href="#aa3d7c552c82bafc4972a6
   </dd>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a233cbe48916fe7cd74f20346b9cd152e"><div class="ttname"><a href="functions-team-2_8c.html#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a></div><div class="ttdeci">void somaDeVetores(int A[], int N)</div><div class="ttdoc">Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:396</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_a233cbe48916fe7cd74f20346b9cd152e"><div class="ttname"><a href="functions-team-2_8c.html#a233cbe48916fe7cd74f20346b9cd152e">somaDeVetores</a></div><div class="ttdeci">void somaDeVetores(int A[], int N)</div><div class="ttdoc">Soma um vetor original com o dobro de um segundo vetor inserido pelo utilizador.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:419</div></div>
 </div><!-- fragment --><p>Soma o vetor original com o dobro de um segundo vetor fornecido pelo utilizador.</p>
 <p>Esta função lê um novo vetor <code class="param">B</code> com <code class="param">N</code> elementos fornecidos pelo utilizador, duplica todos os seus valores e, em seguida, soma cada posição do vetor original <code class="param">A</code> com o vetor <code class="param">B</code> já transformado.</p>
 <p>O resultado dessa soma é armazenado num vetor auxiliar e impresso no ecrã.</p>
@@ -644,7 +749,7 @@ Essa função depende de da função <a class="el" href="#aa3d7c552c82bafc4972a6
   </dd>
 </dl>
 <p>Exemplo de uso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="functions-team-2_8c.html#a886912dd80dd71c90cfb118a7304d34b">vetorDecrescente</a>(vetor, 14);</div>
-<div class="ttc" id="afunctions-team-2_8c_html_a886912dd80dd71c90cfb118a7304d34b"><div class="ttname"><a href="functions-team-2_8c.html#a886912dd80dd71c90cfb118a7304d34b">vetorDecrescente</a></div><div class="ttdeci">void vetorDecrescente(int nome[], int tamanho)</div><div class="ttdoc">Cria e escreve um vetor ordenado por ordem decrescente.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:157</div></div>
+<div class="ttc" id="afunctions-team-2_8c_html_a886912dd80dd71c90cfb118a7304d34b"><div class="ttname"><a href="functions-team-2_8c.html#a886912dd80dd71c90cfb118a7304d34b">vetorDecrescente</a></div><div class="ttdeci">void vetorDecrescente(int nome[], int tamanho)</div><div class="ttdoc">Cria e escreve um vetor ordenado por ordem decrescente.</div><div class="ttdef"><b>Definition</b> functions-team-2.c:178</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

@@ -210,39 +210,49 @@ int mdc(int a, int b);
  */
 void somaDeVetores(int A[], int N);
 
-/**
- * @brief Calcula o determinante de uma matriz quadrada NxN usando expansão de Laplace.
- *
- * @param n Dimensão atual da matriz (n x n).
- * @param a Matriz quadrada n x n.
- * @return Determinante da matriz.
- */
-long long detLaplace(int n, long long a[n][n]);
-
 
 /**
- * @brief Calcula o determinante de uma matriz quadrada NxN.
+ * @brief Multiplica duas matrizes.
  *
- * Esta função aplica a expansão por Laplace de forma recursiva
- * para determinar o valor do determinante. A cada chamada, é construída
- * uma submatriz menor removendo a primeira linha e uma coluna específica.
+ * Recebe duas matrizes @p Matriz_a e @p Matriz_b, com dimensões
+ * (@p la x @p ca) e (@p lb x @p cb), respetivamente, e devolve uma nova
+ * matriz resultante da multiplicação matricial entre ambas.
  *
- * @param matriz Matriz quadrada NxN usada no cálculo.
- * @param n Dimensão atual da matriz.
- * @return int Determinante da matriz.
+ * A função assume que o número de colunas da primeira matriz é igual
+ * ao número de linhas da segunda. Caso contrário, o comportamento é
+ * indefinido.
+ *
+ * @param Matriz_a Primeira matriz.
+ * @param la Número de linhas da primeira matriz.
+ * @param ca Número de colunas da primeira matriz.
+ * @param Matriz_b Segunda matriz.
+ * @param lb Número de linhas da segunda matriz.
+ * @param cb Número de colunas da segunda matriz.
+ * @return int** Matriz resultante da multiplicação.
  *
  * Exemplo de uso:
  * @code
- * int M[3][100] = {{1,2,3},{0,1,4},{5,6,0}};
- * int det = determinante(M, 3);
+ * int **resultado = MultiplicarMatrizes(A, 2, 3, B, 3, 4);
  * @endcode
  */
-
-
 int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb, int cb);
 
+/**
+ * @brief Constrói uma matriz quadrada a partir de um vetor.
+ *
+ * Recebe um vetor @p A com @p N elementos e organiza seus valores
+ * numa matriz quadrada de dimensão adequada (por exemplo, NxN ou outra
+ * conforme implementado). A função imprime a matriz construída.
+ *
+ * @param A Vetor de inteiros utilizado para preencher a matriz.
+ * @param N Número de elementos do vetor.
+ *
+ * Exemplo de uso:
+ * @code
+ * ConstruirMatriz(vetor, 14);
+ * @endcode
+ */
 void ConstruirMatriz(int *A, int N);
 
 
 #endif
-

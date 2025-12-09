@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['somadevetores_0',['somaDeVetores',['../functions-team-2_8c.html#a233cbe48916fe7cd74f20346b9cd152e',1,'somaDeVetores(int A[], int N):&#160;functions-team-2.c'],['../functions-team-2_8h.html#a233cbe48916fe7cd74f20346b9cd152e',1,'somaDeVetores(int A[], int N):&#160;functions-team-2.c']]]
+  ['vetordecrescente_0',['vetorDecrescente',['../functions-team-2_8c.html#a886912dd80dd71c90cfb118a7304d34b',1,'vetorDecrescente(int nome[], int tamanho):&#160;functions-team-2.c'],['../functions-team-2_8h.html#a46077a303703530a95f73d709620867e',1,'vetorDecrescente(int *A, int tamanho):&#160;functions-team-2.h']]]
 ];

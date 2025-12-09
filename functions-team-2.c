@@ -500,7 +500,7 @@ void ConstruirMatriz(int *A_1D, int N) {
     //Aloca um espaço para o novo vetor
     B_matrix = Array2D(N, 1);
 
-    // Allocate space for the 1 x N matrix A and copy elements from A_1D
+    //Aloca espaço para o novo array de 2 dimensões e passa os elementos de A_matriz para lá.
     A_matrix = Array2D(1, N);
     for (i = 0; i < N; i++) {
         A_matrix[0][i] = A_1D[i];
@@ -518,18 +518,18 @@ void ConstruirMatriz(int *A_1D, int N) {
     printf("Matriz gerada:\n");
     escreverArray2D(matriz_result, N, N);
     
-    // Free allocated memory
+    //liberta o array B_matrix
     for (i = 0; i < N; i++) {
         free(B_matrix[i]);
     }
     free(B_matrix);
 
-    for (i = 0; i < 1; i++) { // Only one row for A_matrix
+    for (i = 0; i < 1; i++) { //A_matrix só precisa de ter os elementos eliminados de uma "linha"
         free(A_matrix[i]);
     }
     free(A_matrix);
 
-    // Free matriz_result as it's returned by Array2D
+    //Liberta a matriz_result
     for (i = 0; i < N; i++) {
         free(matriz_result[i]);
     }
