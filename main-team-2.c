@@ -32,7 +32,15 @@
  * @date 2025
  */
 
-int main(void) {
+int main(int argc, char *argv[]) {
+    // Verifica flags de linha de comandos (--help)
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "--help") == 0) {
+            ajuda();
+            return 0;
+        }
+    }
+
     int N = MAX_SIZE;
     int A[N];
     int option;
