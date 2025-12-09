@@ -256,25 +256,27 @@ void matrizDoisPorCatorze(int A[], int tamanho) {
 }
 
 /**
- * @brief Calcula a raiz quadrada de todos os elementos do vetor
+ * @brief Calcula a média dos elementos de um vetor.
  *
- *Esta função recebe um vetor "nome[]" e calcula a raiz quadrada de todos os elementos do vetor e transfere-os para um novo vetor "**matrizDaRaiz[]**"
+ * Soma todos os elementos e divide pelo número total de posições.
  *
- *No final, imprime o novo vetor "matrizDaRaiz[]"
- *
- * @param nome - Vetor original.
- * @param tamanho - Número de elementos no vetor
+ * @param nome - Vetor cujos valores serão utilizados.
+ * @param tamanho - Número de elementos do vetor.
+ * @return Média dos valores presentes no vetor.
  */
-void calculoDaRaizQuadrada(int nome[], int tamanho) {
-    
-    int matrizDaRaiz[tamanho], i;
-    
 
+float mediaArray(int nome[], int tamanho) {
+    
+    int i;
+    int soma = 0;
+    float media;
     for (i = 0; i < tamanho; i++) {
-        matrizDaRaiz[i] = sqrt(nome[i]);
+        soma = soma + nome[i];
     }
-
-    escreverArray(matrizDaRaiz, tamanho);
+    
+    media = soma / tamanho;
+    
+    return media;
 }
 
 /**
