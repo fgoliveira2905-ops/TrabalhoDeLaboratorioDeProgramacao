@@ -83,13 +83,13 @@ void escreverArray(int nome[], int tamanho) {
     printf("\n");
 }
 
-float mediaArray(int nome[], int tamanho) {
+float mediaArray(int *A, int tamanho) {
     
     int i;
     int soma = 0, media;
     
     for (i = 0; i < tamanho; i++) {
-        soma = soma + nome[i];
+        soma = soma + A[i];
     }
     
     media = soma / tamanho;
@@ -192,20 +192,16 @@ void matrizDoisPorCatorze(int A[], int tamanho) {
 }
 
 
-float mediaArray(int nome[], int tamanho) {
-    
-    int i;
-    int soma = 0;
-    float media;
-    for (i = 0; i < tamanho; i++) {
-        soma = soma + nome[i];
-    }
-    
-    media = soma / tamanho;
-    
-    return media;
-}
 
+
+void calculoDaRaizQuadrada(int A[], int tamanho) {
+    int i;
+    printf("Raiz quadrada dos elementos do vetor:\n");
+    for (i = 0; i < tamanho; i++) {
+        printf("%.2f ", sqrt(A[i]));
+    }
+    printf("\n");
+}
 
 void ajuda(void) {
     printf("=== PAGINA DE AJUDA ===\n");

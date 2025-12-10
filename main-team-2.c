@@ -2,6 +2,7 @@
 #include <math.h>
 #include "functions-team-2.h"
 #include <string.h>
+#include <ctype.h>
 #define MAX_SIZE 14
 
 /**
