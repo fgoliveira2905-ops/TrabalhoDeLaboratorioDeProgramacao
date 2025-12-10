@@ -39,6 +39,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include "functions-team-2.h"
+#define TAM 14
 
 int **Array2D(int i, int j)
 {
@@ -347,7 +348,7 @@ void ConstruirMatriz(int *A_1D, int N) {
     printf("Deseja calcular o determiante da matriz inserida (1 - Sim / 0 - Nao)? ");
     scanf("%d", &choice);
     if (choice == 1) {
-        int det = determinante(matriz_result, N);
+        determinante(matriz_result);
         
         //Liberta a matriz_result
         for (i = 0; i < N; i++) {
@@ -365,38 +366,44 @@ void ConstruirMatriz(int *A_1D, int N) {
     
 }
 
-int determinante(int **A, int N) {
-    
-    int i, j, k, col;
-    
-    if (N == 1) {
-        return A[0][0];
-    } else if (N == 2)
-        return A[0][0]*A[1][1] + A[2][1]*A[1][2];
-    
-    double det = 0;
-    double **M = malloc((N - 1) * sizeof(double));
-    
-    for (j = 0; j < N; j++) {
-        for (i = 0; j < N; j++) {
-            M[i] = malloc((N - 1) * sizeof(double));
+void determinante(int **matriz) {
+
+    // Vamos usar uma c�pia para n�o mudar a matriz original durante o c�lculo
+    float CopiaMatriz[TAM][TAM];
+    float determinante = 1;
+    float fator;
+
+
+    // Copia a matriz
+    for (int i = 0; i < TAM; i++) {
+        for (int j = 0; j < TAM; j++) {
+            CopiaMatriz[i][j] = matriz[i][j];
         }
-        
-        for(i = 0; i < N; i++) {
-            col = 0;
-            for (k = 0; k < N; k++) {
-                M[i-1][col++] = A[i][k];
+    }
+
+    // Método de Eliminação de Gauss-Jordan
+    for (int i = 0; i < TAM; i++) {
+        // Se encontrar 0 na diagonal, assumimos det = 0.
+        if (CopiaMatriz[i][i] == 0) {
+            determinante = 0;
+            break;
+        }
+        for (int k = i + 1; k < TAM; k++) {
+            // Calcula quanto temos de subtrair para dar reset naquele número
+            fator = CopiaMatriz[k][i] / CopiaMatriz[i][i];
+            // Subtrai a linha inteira
+            for (int j = i; j < TAM; j++) {
+                CopiaMatriz[k][j] -= fator * CopiaMatriz[i][j];
             }
         }
-        
-        double cofator = ((j % 2 == 0) ? 1 : -1) * A[0][j];
-        det += cofator * determinante(M, N-1);
-        
-        for (i = 0; i < N; i++) {
-            free(M[i]);
-        }
-        free(M);
-        
     }
-    return det;
+
+    // Se não deu reset no meio do caminho, multiplica a diagonal principal
+    if (determinante != 0) {
+        for (int i = 0; i < TAM; i++) {
+            determinante *= CopiaMatriz[i][i];
+        }
+    }
+
+    printf("\nDeterminante: %f\n", determinante);
 }

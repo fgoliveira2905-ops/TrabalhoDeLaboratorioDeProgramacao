@@ -185,6 +185,6 @@ int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb
 void ConstruirMatriz(int *A, int N);
 
 
-int determinante(int **A, int N);
+void determinante(int **A);
 
 #endif
