@@ -4,6 +4,7 @@ var functions_team_2_8h =
     [ "Array2D", "functions-team-2_8h.html#aa14b83796679879b381a1c5cde50604e", null ],
     [ "calculoDaRaizQuadrada", "functions-team-2_8h.html#a306e81b7dc4188518aed66d290bf2c46", null ],
     [ "ConstruirMatriz", "functions-team-2_8h.html#ae53eb7be79d1506686ccb779f03d5764", null ],
+    [ "determinante", "functions-team-2_8h.html#a2b1b8ac43c0203c6cf63871a3b14f986", null ],
     [ "escreverArray2D", "functions-team-2_8h.html#a6509a3a8c63e8596ef0b081d61782d5c", null ],
     [ "lerArray", "functions-team-2_8h.html#afe49cd36796a261d1d0a6a2f0fdfdb41", null ],
     [ "maioresValoresDivisiveisPor5", "functions-team-2_8h.html#abaaf22c118c6f0e05138c7880cc40374", null ],

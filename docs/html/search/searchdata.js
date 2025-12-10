@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "acdefilmopstv",
   1: "fm",
-  2: "acelmsv",
+  2: "acdelmsv",
   3: "m",
   4: "adefilmoptv"
 };
@@ -18,10 +18,10 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Files",
-  2: "Functions",
+  0: "Tudo",
+  1: "Ficheiros",
+  2: "Funções",
   3: "Macros",
-  4: "Pages"
+  4: "Páginas"
 };
 

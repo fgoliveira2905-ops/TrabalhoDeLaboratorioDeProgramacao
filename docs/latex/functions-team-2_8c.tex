@@ -1,4 +1,4 @@
-\doxysection{functions-\/team-\/2.c File Reference}
+\doxysection{Referência ao ficheiro functions-\/team-\/2.c}
 \hypertarget{functions-team-2_8c}{}\label{functions-team-2_8c}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 
 
@@ -9,7 +9,7 @@ Funções utilitárias para manipulação de vetores e operações matemáticas.
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include "{}functions-\/team-\/2.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+\doxysubsubsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
 int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{functions-team-2_8c_aa14b83796679879b381a1c5cde50604e}{Array2D}} (int i, int j)
@@ -20,13 +20,15 @@ void \mbox{\hyperlink{functions-team-2_8c_a211274a7a16d67fc1337305d5daa4c61}{ler
 \item 
 void \mbox{\hyperlink{functions-team-2_8c_a8ab499959843a1b199f02db4537eb5aa}{escrever\+Array}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
 \item 
-float \mbox{\hyperlink{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9}{media\+Array}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
-\item 
+float \mbox{\hyperlink{functions-team-2_8c_a9961d81f26dd4601406a6b7e8881213b}{media\+Array}} (int \texorpdfstring{$\ast$}{*}A, int tamanho)
+\begin{DoxyCompactList}\small\item\em Calcula a média dos elementos de um array. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{functions-team-2_8c_aaf4950dc84a65aaae3c7c46a55eb24e6}{maiores\+Valores\+Divisiveis\+Por5}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
 \item 
 void \mbox{\hyperlink{functions-team-2_8c_a886912dd80dd71c90cfb118a7304d34b}{vetor\+Decrescente}} (int nome\mbox{[}$\,$\mbox{]}, int tamanho)
 \item 
 void \mbox{\hyperlink{functions-team-2_8c_ad9b24c08424a9ad689669a157de42df1}{matriz\+Dois\+Por\+Catorze}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
+\item 
+void \mbox{\hyperlink{functions-team-2_8c_ae4136c86498ac6f609da920b3b8d6a95}{calculo\+Da\+Raiz\+Quadrada}} (int A\mbox{[}$\,$\mbox{]}, int tamanho)
 \item 
 void \mbox{\hyperlink{functions-team-2_8c_ac7c9e1438208537d4308112b49ea014c}{ajuda}} (void)
 \begin{DoxyCompactList}\small\item\em Imprime a ajuda do programa. \end{DoxyCompactList}\item 
@@ -43,17 +45,19 @@ void \mbox{\hyperlink{functions-team-2_8c_a233cbe48916fe7cd74f20346b9cd152e}{som
 int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{functions-team-2_8c_a614426b198a46a2adbdbd8633b2d3170}{Multiplicar\+Matrizes}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Matriz\+\_\+a, int la, int ca, int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Matriz\+\_\+b, int lb, int cb)
 \begin{DoxyCompactList}\small\item\em Multiplica duas matrizes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{functions-team-2_8c_a3bb3ab256d91f1d2593f26e8502dfca8}{Construir\+Matriz}} (int \texorpdfstring{$\ast$}{*}A\+\_\+1D, int N)
-\begin{DoxyCompactList}\small\item\em Constrói e imprime uma matriz quadrada a partir de um array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constrói e imprime uma matriz quadrada a partir de um array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions-team-2_8c_a2b1b8ac43c0203c6cf63871a3b14f986}{determinante}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}A, int N)
+\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descrição detalhada}
 Funções utilitárias para manipulação de vetores e operações matemáticas. 
 
 
 
 \label{doc-func-members}
 \Hypertarget{functions-team-2_8c_doc-func-members}
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentação das funções}
 \Hypertarget{functions-team-2_8c_ac7c9e1438208537d4308112b49ea014c}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!ajuda@{ajuda}}
 \index{ajuda@{ajuda}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 \doxysubsubsection{\texorpdfstring{ajuda()}{ajuda()}}
@@ -64,7 +68,7 @@ void ajuda (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 Imprime a ajuda do programa. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_aa14b83796679879b381a1c5cde50604e}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!Array2D@{Array2D}}
@@ -80,15 +84,21 @@ Recebe valores de um array de duas dimensões.
 Recebe o numero de linhas ({\ttfamily i} ) e o numero de colunas ({\ttfamily j}) e devolve um array de duas dimensões.
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em i} & -\/ Número de linhas do array. \\
 \hline
 {\em j} & -\/ Número de colunas do array. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Retorna um ponteiro para o array contruido. 
 \end{DoxyReturn}
+\Hypertarget{functions-team-2_8c_ae4136c86498ac6f609da920b3b8d6a95}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!calculoDaRaizQuadrada@{calculoDaRaizQuadrada}}
+\index{calculoDaRaizQuadrada@{calculoDaRaizQuadrada}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{calculoDaRaizQuadrada()}{calculoDaRaizQuadrada()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_ae4136c86498ac6f609da920b3b8d6a95} 
+void calculo\+Da\+Raiz\+Quadrada (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+
 \Hypertarget{functions-team-2_8c_a3bb3ab256d91f1d2593f26e8502dfca8}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!ConstruirMatriz@{ConstruirMatriz}}
 \index{ConstruirMatriz@{ConstruirMatriz}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 \doxysubsubsection{\texorpdfstring{ConstruirMatriz()}{ConstruirMatriz()}}
@@ -100,15 +110,21 @@ void Construir\+Matriz (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast
 Constrói e imprime uma matriz quadrada a partir de um array. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em A} & Array de inteiros. \\
 \hline
 {\em N} & Número de elementos. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
+\Hypertarget{functions-team-2_8c_a2b1b8ac43c0203c6cf63871a3b14f986}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!determinante@{determinante}}
+\index{determinante@{determinante}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
+\doxysubsubsection{\texorpdfstring{determinante()}{determinante()}}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a2b1b8ac43c0203c6cf63871a3b14f986} 
+int determinante (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{A}{, }\item[{int}]{N}{}\end{DoxyParamCaption})}
+
 \Hypertarget{functions-team-2_8c_a8ab499959843a1b199f02db4537eb5aa}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!escreverArray@{escreverArray}}
 \index{escreverArray@{escreverArray}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 \doxysubsubsection{\texorpdfstring{escreverArray()}{escreverArray()}}
@@ -128,7 +144,7 @@ Escreve um array de duas dimensões.
 Recebe um array de duas dimensões ({\ttfamily Matriz} ), seu número de linhas ({\ttfamily l} ), seu número de colunas ({\ttfamily c} ) e imprime na tela o array.
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em Matriz} & -\/ Array de duas dimensões. \\
 \hline
 {\em l} & -\/ Número de linhas do array. \\
@@ -136,7 +152,7 @@ Recebe um array de duas dimensões ({\ttfamily Matriz} ), seu número de linhas 
 {\em c} & -\/ Número de colunas do arrray. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_a211274a7a16d67fc1337305d5daa4c61}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!lerArray@{lerArray}}
@@ -168,21 +184,37 @@ int mdc (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyPa
 Calcula o máximo divisor comum entre dois inteiros. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em a} & Primeiro inteiro. \\
 \hline
 {\em b} & Segundo inteiro. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 int MDC de a e b. 
 \end{DoxyReturn}
-\Hypertarget{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mediaArray@{mediaArray}}
+\Hypertarget{functions-team-2_8c_a9961d81f26dd4601406a6b7e8881213b}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mediaArray@{mediaArray}}
 \index{mediaArray@{mediaArray}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 \doxysubsubsection{\texorpdfstring{mediaArray()}{mediaArray()}}
-{\footnotesize\ttfamily \label{functions-team-2_8c_ac17adb8b1b8b675aa4566658becdaed9} 
-float media\+Array (\begin{DoxyParamCaption}\item[{int}]{nome}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{functions-team-2_8c_a9961d81f26dd4601406a6b7e8881213b} 
+float media\+Array (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{A}{, }\item[{int}]{tamanho}{}\end{DoxyParamCaption})}
 
+
+
+Calcula a média dos elementos de um array. 
+
+A média é devolvida como valor em virgula flutuante.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em A} & Array de inteiros. \\
+\hline
+{\em tamanho} & Número de elementos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+float Média calculada. 
+\end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_a2befbe8b2f5e26a7c293869fec2b1e87}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!minimo@{minimo}}
 \index{minimo@{minimo}!functions-\/team-\/2.c@{functions-\/team-\/2.c}}
 \doxysubsubsection{\texorpdfstring{minimo()}{minimo()}}
@@ -200,13 +232,13 @@ int mmc (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyPa
 Calcula o mínimo múltiplo comum entre dois inteiros. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em a} & Primeiro inteiro. \\
 \hline
 {\em b} & Segundo inteiro. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 int MMC de a e b. 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_ab3f194b11c0a186933381df283a42c7d}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!mmcDoVetor@{mmcDoVetor}}
@@ -220,13 +252,13 @@ void mmc\+Do\+Vetor (\begin{DoxyParamCaption}\item[{int}]{A}{\mbox{[}$\,$\mbox{]
 Calcula o MMC entre pares consecutivos do array. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em A} & Array de inteiros. \\
 \hline
 {\em tamanho} & Número de elementos. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_a614426b198a46a2adbdbd8633b2d3170}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!MultiplicarMatrizes@{MultiplicarMatrizes}}
@@ -240,7 +272,7 @@ int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Multiplicar\+Matrizes (
 Multiplica duas matrizes. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em Matriz\+\_\+a} & Primeira matriz. \\
 \hline
 {\em la} & Linhas da primeira matriz. \\
@@ -254,7 +286,7 @@ Multiplica duas matrizes.
 {\em cb} & Colunas da segunda matriz. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 int\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Matriz resultante. 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_a233cbe48916fe7cd74f20346b9cd152e}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!somaDeVetores@{somaDeVetores}}
@@ -270,13 +302,13 @@ Soma o array original com o dobro de um segundo array fornecido.
 Lê um array B, duplica os valores e soma à posição correspondente de A.
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em A} & Array original. \\
 \hline
 {\em N} & Número de elementos. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 void 
 \end{DoxyReturn}
 \Hypertarget{functions-team-2_8c_a886912dd80dd71c90cfb118a7304d34b}\index{functions-\/team-\/2.c@{functions-\/team-\/2.c}!vetorDecrescente@{vetorDecrescente}}

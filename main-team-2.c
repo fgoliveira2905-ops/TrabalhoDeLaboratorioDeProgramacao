@@ -48,6 +48,7 @@ int main(int argc, char *argv[]) {
     int option;
     int media;
     int min;
+    int choice;
 
     /* Tela que pede que o ultilizador pressione ENTER para continuar */
     do {

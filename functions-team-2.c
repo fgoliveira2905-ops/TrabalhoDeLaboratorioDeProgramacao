@@ -342,10 +342,61 @@ void ConstruirMatriz(int *A_1D, int N) {
         free(A_matrix[i]);
     }
     free(A_matrix);
-
-    //Liberta a matriz_result
-    for (i = 0; i < N; i++) {
-        free(matriz_result[i]);
+    
+    int choice;
+    printf("Deseja calcular o determiante da matriz inserida (1 - Sim / 0 - Nao)? ");
+    scanf("%d", &choice);
+    if (choice == 1) {
+        int det = determinante(matriz_result, N);
+        
+        //Liberta a matriz_result
+        for (i = 0; i < N; i++) {
+            free(matriz_result[i]);
+        }
+        free(matriz_result);
+    } else if (choice == 2) {
+        //Liberta a matriz_result
+        for (i = 0; i < N; i++) {
+            free(matriz_result[i]);
+        }
+        free(matriz_result);
+        
     }
-    free(matriz_result);
+    
+}
+
+int determinante(int **A, int N) {
+    
+    int i, j, k, col;
+    
+    if (N == 1) {
+        return A[0][0];
+    } else if (N == 2)
+        return A[0][0]*A[1][1] + A[2][1]*A[1][2];
+    
+    double det = 0;
+    double **M = malloc((N - 1) * sizeof(double));
+    
+    for (j = 0; j < N; j++) {
+        for (i = 0; j < N; j++) {
+            M[i] = malloc((N - 1) * sizeof(double));
+        }
+        
+        for(i = 0; i < N; i++) {
+            col = 0;
+            for (k = 0; k < N; k++) {
+                M[i-1][col++] = A[i][k];
+            }
+        }
+        
+        double cofator = ((j % 2 == 0) ? 1 : -1) * A[0][j];
+        det += cofator * determinante(M, N-1);
+        
+        for (i = 0; i < N; i++) {
+            free(M[i]);
+        }
+        free(M);
+        
+    }
+    return det;
 }
