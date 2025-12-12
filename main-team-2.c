@@ -35,7 +35,7 @@
  */
 
 int main(int argc, char *argv[]) {
-    // Verifica flags de linha de comandos (--help)
+    // Verifica flags de linha de comandos iguais a flag --help.
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "--help") == 0) {
             ajuda();
@@ -60,20 +60,21 @@ int main(int argc, char *argv[]) {
     lerArray(A, N);
 
     /* Ecrã de opções */
-    printf("Escolha uma das opcoes:\n");
-    printf("1 - Cálculo da média de todos os elementos no vetor\n");
-    printf("2 - Devolução dos valores maiores que dois e divisíveis por cinco\n");
-    printf("3 - Devolução do vetor ordenado por ordem decrescente\n");
-    printf("4 - Construção de uma matriz dois por 14, em que cada linha é composta pelo vetor lido e pelo vetor ordenado por ordem crescente\n");
-    printf("5 - Cálculo da raíz quadrada de todos os elementos no vetor\n");
-    printf("6 - Identificação do mínimo de todos os elementos do vetor\n");
-    printf("7 - Ajuda\n");
-    printf("8 - Cálculo do mínimo múltiplo comum de cada dois números seguidos do vetor\n");
-    printf("9 - Leitura  de  um novo vetor  1x14,  cálculo  e  devolução  da  matriz 14x14 resultante do produto do vetor inicial com o novo vetor gerado\n");
-    printf("10 − Determinante da matriz anterior (nota: carregar no 9 primeiro para obter a matriz)\n");
-    printf("11 - Leitura de um novo vetor, cálculo e devolução da  soma  do  primeiro vetor com o dobro do segundo\n");
+    while (1) {
+        printf("Escolha uma das opcoes:\n");
+        printf("1 - Cálculo da média de todos os elementos no vetor\n");
+        printf("2 - Devolução dos valores maiores que dois e divisíveis por cinco\n");
+        printf("3 - Devolução do vetor ordenado por ordem decrescente\n");
+        printf("4 - Construção de uma matriz dois por 14, em que cada linha é composta pelo vetor lido e pelo vetor ordenado por ordem crescente\n");
+        printf("5 - Cálculo da raíz quadrada de todos os elementos no vetor\n");
+        printf("6 - Identificação do mínimo de todos os elementos do vetor\n");
+        printf("7 - Ajuda\n");
+        printf("8 - Cálculo do mínimo múltiplo comum de cada dois números seguidos do vetor\n");
+        printf("9 - Leitura  de  um novo vetor  1x14,  cálculo  e  devolução  da  matriz 14x14 resultante do produto do vetor inicial com o novo vetor gerado\n");
+        printf("10 − Determinante da matriz anterior (nota: carregar no 9 primeiro para obter a matriz)\n");
+        printf("11 - Leitura de um novo vetor, cálculo e devolução da soma do primeiro vetor com o dobro do segundo\n");
+        printf("0 - Sair\n");
 
-    do {
         scanf("%d", &option);
 
         switch (option) {
@@ -92,13 +93,16 @@ int main(int argc, char *argv[]) {
                 break;
             case 4:
                 printf("\n");
+                printf("Matriz: \n");
                 matrizDoisPorCatorze(A, N);
                 break;
             case 5:
+                printf("\n");
                 calculoDaRaizQuadrada(A, N);
                 break;
             case 6:
                 min = minimo(A, N);
+                printf("\n");
                 printf("Valor minimo do vetor: %d\n", min);
                 break;
             case 7:
@@ -107,19 +111,29 @@ int main(int argc, char *argv[]) {
                 printf("\n");
                 break;
             case 8:
+                printf("\n");
                 mmcDoVetor(A, N);
                 break;
             case 9:
+                printf("\n");
                 ConstruirMatriz(A, N);
                 break;
             case 10:
-                printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\nInserir outro numero: ");
+                printf("\n");
+                printf("E necessario outra matriz para esta opcao (Carregue 9 primeiro).\n");
                 break;
             case 11:
+                printf("\n");
                 somaDeVetores(A, N);
                 break;
+            case 0:
+                printf("Saindo...\n");
+                return 0;
+            default:
+                printf("\n");
+                printf("Opcao invalida!\n");
         }
-    } while (option < 1 || option > 11 || option == 10);
+    }
     
     return 0;
 }
@@ -138,7 +152,7 @@ int main(int argc, char *argv[]) {
  * O utilizador interage com um vetor de 14 inteiros e pode executar operações
  * como cálculo de média, ordenação, filtragem, construção de matrizes,
  * operações matemáticas e análises específicas.
- * 
+ *
  */
 
 /**

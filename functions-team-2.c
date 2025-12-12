@@ -120,6 +120,7 @@ void maioresValoresDivisiveisPor5(int A[], int tamanho) {
     }
 
     // Escrevemos
+    printf("Maiores valores divisíveis por cinco: ");
     escreverArray(validos, contador);
 
     free(validos);
