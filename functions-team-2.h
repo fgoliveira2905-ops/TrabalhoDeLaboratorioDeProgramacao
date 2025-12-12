@@ -185,6 +185,20 @@ int **MultiplicarMatrizes(int **Matriz_a, int la, int ca, int **Matriz_b, int lb
 void ConstruirMatriz(int *A, int N);
 
 
-void determinante(int **A);
+/**
+ * @brief Calcula o determinante de uma matriz.
+ *
+ * @details Esta função obtém o determinante da matriz resultante da função
+ * MultiplicarMatrizes(), aplicando o método de eliminação de Gauss‑Jordan.
+ * A matriz recebida é copiada internamente para outra matriz quadrada cujo
+ * tamanho (número de linhas e colunas) é definido pelo macro TAM.
+ *
+ * @param matriz Matriz da qual será calculado o determinante.
+ * @return void
+ *
+ * @note Não é necessário fornecer o tamanho da matriz, pois ele é definido
+ * automaticamente pelo macro TAM utilizado no programa.
+ */
+void determinante(int **matriz);
 
 #endif
